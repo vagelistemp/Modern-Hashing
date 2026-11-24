@@ -1,0 +1,681 @@
+experiment,impl,n,lf,keys,phase,ns_per_op_median,ns_per_op_min,ns_per_op_max,reps
+e2,slow-partition,1000,0.5,sequential,insert_new,9.200,8.000,9.800,7
+e2,slow-partition,1000,0.5,sequential,upsert,114.200,112.600,130.600,7
+e2,slow-partition,1000,0.5,sequential,get_hit,118.600,113.000,155.800,7
+e2,slow-partition,1000,0.5,sequential,get_miss,193.200,190.600,229.000,7
+e2,slow-partition,1000,0.5,sequential,remove,71.800,70.800,112.400,7
+e2,indexed[btree-packed7],1000,0.5,sequential,insert_new,139.200,136.400,197.200,7
+e2,indexed[btree-packed7],1000,0.5,sequential,upsert,72.800,71.600,73.400,7
+e2,indexed[btree-packed7],1000,0.5,sequential,get_hit,70.000,69.600,76.400,7
+e2,indexed[btree-packed7],1000,0.5,sequential,get_miss,70.000,69.400,71.000,7
+e2,indexed[btree-packed7],1000,0.5,sequential,remove,230.800,229.600,246.800,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,sequential,insert_new,90.200,86.400,125.400,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,sequential,upsert,52.400,51.600,61.000,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,sequential,get_hit,58.000,57.000,66.800,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,sequential,get_miss,55.000,53.800,62.600,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,sequential,remove,170.000,169.000,380.400,7
+e2,indexed[std-hash],1000,0.5,sequential,insert_new,111.000,103.400,124.800,7
+e2,indexed[std-hash],1000,0.5,sequential,upsert,35.200,33.600,37.200,7
+e2,indexed[std-hash],1000,0.5,sequential,get_hit,38.600,36.600,1262.200,7
+e2,indexed[std-hash],1000,0.5,sequential,get_miss,35.800,34.000,47.400,7
+e2,indexed[std-hash],1000,0.5,sequential,remove,97.800,90.200,100.000,7
+e2,k-tries[btree-packed7],1000,0.5,sequential,insert_new,318.400,222.000,388.800,7
+e2,k-tries[btree-packed7],1000,0.5,sequential,upsert,226.800,162.800,257.600,7
+e2,k-tries[btree-packed7],1000,0.5,sequential,get_hit,86.600,66.200,95.600,7
+e2,k-tries[btree-packed7],1000,0.5,sequential,get_miss,83.400,66.400,90.000,7
+e2,k-tries[btree-packed7],1000,0.5,sequential,remove,464.200,331.400,532.600,7
+e2,std HashMap (SipHash),1000,0.5,sequential,insert_new,13.200,13.000,13.400,7
+e2,std HashMap (SipHash),1000,0.5,sequential,upsert,10.600,10.600,10.800,7
+e2,std HashMap (SipHash),1000,0.5,sequential,get_hit,10.200,10.000,10.400,7
+e2,std HashMap (SipHash),1000,0.5,sequential,get_miss,10.200,9.800,10.600,7
+e2,std HashMap (SipHash),1000,0.5,sequential,remove,11.200,11.200,11.400,7
+e2,std HashMap (Fx hasher),1000,0.5,sequential,insert_new,6.400,6.400,6.600,7
+e2,std HashMap (Fx hasher),1000,0.5,sequential,upsert,4.600,4.400,4.600,7
+e2,std HashMap (Fx hasher),1000,0.5,sequential,get_hit,2.600,2.400,2.600,7
+e2,std HashMap (Fx hasher),1000,0.5,sequential,get_miss,2.000,2.000,2.000,7
+e2,std HashMap (Fx hasher),1000,0.5,sequential,remove,5.400,5.200,5.600,7
+e2,slow-partition,1000,0.5,random,insert_new,8.000,7.800,8.200,7
+e2,slow-partition,1000,0.5,random,upsert,96.400,96.200,96.800,7
+e2,slow-partition,1000,0.5,random,get_hit,96.800,96.400,97.000,7
+e2,slow-partition,1000,0.5,random,get_miss,169.600,169.400,169.800,7
+e2,slow-partition,1000,0.5,random,remove,61.600,61.000,86.800,7
+e2,indexed[btree-packed7],1000,0.5,random,insert_new,125.800,124.600,168.800,7
+e2,indexed[btree-packed7],1000,0.5,random,upsert,64.400,63.800,221.000,7
+e2,indexed[btree-packed7],1000,0.5,random,get_hit,62.000,61.800,96.200,7
+e2,indexed[btree-packed7],1000,0.5,random,get_miss,61.800,61.400,175.600,7
+e2,indexed[btree-packed7],1000,0.5,random,remove,206.600,203.600,512.800,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,random,insert_new,91.000,88.200,114.200,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,random,upsert,52.800,52.200,59.600,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,random,get_hit,58.600,57.200,64.000,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,random,get_miss,55.400,55.000,56.200,7
+e2,indexed[std-btree] (thesis-like),1000,0.5,random,remove,168.800,167.800,191.000,7
+e2,indexed[std-hash],1000,0.5,random,insert_new,71.600,70.000,98.600,7
+e2,indexed[std-hash],1000,0.5,random,upsert,25.800,25.800,26.000,7
+e2,indexed[std-hash],1000,0.5,random,get_hit,26.800,26.800,27.000,7
+e2,indexed[std-hash],1000,0.5,random,get_miss,26.600,26.600,26.800,7
+e2,indexed[std-hash],1000,0.5,random,remove,64.000,63.600,70.600,7
+e2,k-tries[btree-packed7],1000,0.5,random,insert_new,239.200,229.600,287.800,7
+e2,k-tries[btree-packed7],1000,0.5,random,upsert,160.000,159.600,166.400,7
+e2,k-tries[btree-packed7],1000,0.5,random,get_hit,66.400,66.200,66.600,7
+e2,k-tries[btree-packed7],1000,0.5,random,get_miss,66.400,66.000,72.400,7
+e2,k-tries[btree-packed7],1000,0.5,random,remove,300.000,297.600,312.800,7
+e2,std HashMap (SipHash),1000,0.5,random,insert_new,13.200,13.000,13.400,7
+e2,std HashMap (SipHash),1000,0.5,random,upsert,10.600,10.600,11.000,7
+e2,std HashMap (SipHash),1000,0.5,random,get_hit,10.200,10.200,10.400,7
+e2,std HashMap (SipHash),1000,0.5,random,get_miss,10.200,10.000,10.200,7
+e2,std HashMap (SipHash),1000,0.5,random,remove,11.200,11.000,11.200,7
+e2,std HashMap (Fx hasher),1000,0.5,random,insert_new,6.400,6.200,6.600,7
+e2,std HashMap (Fx hasher),1000,0.5,random,upsert,4.600,4.600,4.600,7
+e2,std HashMap (Fx hasher),1000,0.5,random,get_hit,2.400,2.400,2.600,7
+e2,std HashMap (Fx hasher),1000,0.5,random,get_miss,2.400,2.400,2.600,7
+e2,std HashMap (Fx hasher),1000,0.5,random,remove,5.400,5.400,5.600,7
+e2,slow-partition,1000,0.9,sequential,insert_new,8.111,8.000,11.778,7
+e2,slow-partition,1000,0.9,sequential,upsert,170.222,155.000,329.111,7
+e2,slow-partition,1000,0.9,sequential,get_hit,158.556,155.222,421.889,7
+e2,slow-partition,1000,0.9,sequential,get_miss,286.667,284.333,418.889,7
+e2,slow-partition,1000,0.9,sequential,remove,91.000,88.444,137.556,7
+e2,indexed[btree-packed7],1000,0.9,sequential,insert_new,125.444,124.667,128.556,7
+e2,indexed[btree-packed7],1000,0.9,sequential,upsert,64.333,64.222,64.667,7
+e2,indexed[btree-packed7],1000,0.9,sequential,get_hit,62.222,62.111,69.333,7
+e2,indexed[btree-packed7],1000,0.9,sequential,get_miss,61.556,61.556,64.889,7
+e2,indexed[btree-packed7],1000,0.9,sequential,remove,213.444,211.111,230.444,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,sequential,insert_new,94.333,92.556,99.333,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,sequential,upsert,59.333,59.000,63.667,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,sequential,get_hit,64.667,64.000,65.444,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,sequential,get_miss,62.889,62.778,65.111,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,sequential,remove,186.222,185.667,187.556,7
+e2,indexed[std-hash],1000,0.9,sequential,insert_new,73.778,73.000,110.778,7
+e2,indexed[std-hash],1000,0.9,sequential,upsert,26.667,26.556,30.444,7
+e2,indexed[std-hash],1000,0.9,sequential,get_hit,26.667,26.556,26.778,7
+e2,indexed[std-hash],1000,0.9,sequential,get_miss,26.333,26.222,26.333,7
+e2,indexed[std-hash],1000,0.9,sequential,remove,63.889,63.556,64.556,7
+e2,k-tries[btree-packed7],1000,0.9,sequential,insert_new,225.444,223.000,330.444,7
+e2,k-tries[btree-packed7],1000,0.9,sequential,upsert,168.111,167.778,235.778,7
+e2,k-tries[btree-packed7],1000,0.9,sequential,get_hit,66.778,66.667,80.778,7
+e2,k-tries[btree-packed7],1000,0.9,sequential,get_miss,66.444,66.333,104.667,7
+e2,k-tries[btree-packed7],1000,0.9,sequential,remove,342.778,342.333,469.556,7
+e2,std HashMap (SipHash),1000,0.9,sequential,insert_new,13.333,13.000,13.444,7
+e2,std HashMap (SipHash),1000,0.9,sequential,upsert,10.667,10.556,10.778,7
+e2,std HashMap (SipHash),1000,0.9,sequential,get_hit,10.111,10.111,10.222,7
+e2,std HashMap (SipHash),1000,0.9,sequential,get_miss,10.333,10.111,10.444,7
+e2,std HashMap (SipHash),1000,0.9,sequential,remove,11.444,11.000,11.778,7
+e2,std HashMap (Fx hasher),1000,0.9,sequential,insert_new,6.222,6.222,6.444,7
+e2,std HashMap (Fx hasher),1000,0.9,sequential,upsert,4.556,4.556,4.556,7
+e2,std HashMap (Fx hasher),1000,0.9,sequential,get_hit,2.444,2.444,2.556,7
+e2,std HashMap (Fx hasher),1000,0.9,sequential,get_miss,1.889,1.889,2.000,7
+e2,std HashMap (Fx hasher),1000,0.9,sequential,remove,5.333,5.222,5.444,7
+e2,slow-partition,1000,0.9,random,insert_new,7.222,7.111,7.778,7
+e2,slow-partition,1000,0.9,random,upsert,155.444,154.556,348.000,7
+e2,slow-partition,1000,0.9,random,get_hit,155.444,155.333,314.111,7
+e2,slow-partition,1000,0.9,random,get_miss,284.222,283.222,541.333,7
+e2,slow-partition,1000,0.9,random,remove,131.444,88.000,155.444,7
+e2,indexed[btree-packed7],1000,0.9,random,insert_new,142.222,137.889,185.000,7
+e2,indexed[btree-packed7],1000,0.9,random,upsert,65.889,63.889,78.889,7
+e2,indexed[btree-packed7],1000,0.9,random,get_hit,63.222,62.000,76.556,7
+e2,indexed[btree-packed7],1000,0.9,random,get_miss,63.778,62.000,99.556,7
+e2,indexed[btree-packed7],1000,0.9,random,remove,236.778,228.889,309.667,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,random,insert_new,97.889,94.667,111.444,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,random,upsert,56.556,56.333,59.667,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,random,get_hit,62.222,61.556,65.333,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,random,get_miss,59.444,59.000,60.222,7
+e2,indexed[std-btree] (thesis-like),1000,0.9,random,remove,181.889,179.889,190.000,7
+e2,indexed[std-hash],1000,0.9,random,insert_new,73.444,72.222,100.778,7
+e2,indexed[std-hash],1000,0.9,random,upsert,25.889,25.778,25.889,7
+e2,indexed[std-hash],1000,0.9,random,get_hit,26.889,26.889,28.111,7
+e2,indexed[std-hash],1000,0.9,random,get_miss,26.333,26.111,26.444,7
+e2,indexed[std-hash],1000,0.9,random,remove,64.333,64.222,64.778,7
+e2,k-tries[btree-packed7],1000,0.9,random,insert_new,314.556,244.333,1763.222,7
+e2,k-tries[btree-packed7],1000,0.9,random,upsert,223.556,161.333,257.222,7
+e2,k-tries[btree-packed7],1000,0.9,random,get_hit,82.222,66.778,90.556,7
+e2,k-tries[btree-packed7],1000,0.9,random,get_miss,81.333,66.778,82.889,7
+e2,k-tries[btree-packed7],1000,0.9,random,remove,388.667,329.000,523.000,7
+e2,std HashMap (SipHash),1000,0.9,random,insert_new,13.333,13.111,13.444,7
+e2,std HashMap (SipHash),1000,0.9,random,upsert,10.667,10.556,10.778,7
+e2,std HashMap (SipHash),1000,0.9,random,get_hit,10.111,10.111,10.222,7
+e2,std HashMap (SipHash),1000,0.9,random,get_miss,10.333,10.111,10.444,7
+e2,std HashMap (SipHash),1000,0.9,random,remove,11.111,11.111,11.222,7
+e2,std HashMap (Fx hasher),1000,0.9,random,insert_new,6.667,6.556,6.667,7
+e2,std HashMap (Fx hasher),1000,0.9,random,upsert,4.556,4.556,4.667,7
+e2,std HashMap (Fx hasher),1000,0.9,random,get_hit,2.556,2.556,2.667,7
+e2,std HashMap (Fx hasher),1000,0.9,random,get_miss,2.778,2.667,2.778,7
+e2,std HashMap (Fx hasher),1000,0.9,random,remove,6.111,6.000,6.222,7
+e2,slow-partition,10000,0.5,sequential,insert_new,7.200,7.100,11.560,7
+e2,slow-partition,10000,0.5,sequential,upsert,209.920,209.240,376.020,7
+e2,slow-partition,10000,0.5,sequential,get_hit,210.980,209.840,220.180,7
+e2,slow-partition,10000,0.5,sequential,get_miss,388.840,384.060,867.540,7
+e2,slow-partition,10000,0.5,sequential,remove,164.980,119.040,207.880,7
+e2,indexed[btree-packed7],10000,0.5,sequential,insert_new,155.400,143.360,213.320,7
+e2,indexed[btree-packed7],10000,0.5,sequential,upsert,83.220,81.160,134.040,7
+e2,indexed[btree-packed7],10000,0.5,sequential,get_hit,79.860,79.240,292.480,7
+e2,indexed[btree-packed7],10000,0.5,sequential,get_miss,82.540,78.640,96.080,7
+e2,indexed[btree-packed7],10000,0.5,sequential,remove,255.620,229.840,399.820,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,sequential,insert_new,98.840,98.260,105.640,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,sequential,upsert,63.020,62.760,63.440,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,sequential,get_hit,68.800,67.780,69.100,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,sequential,get_miss,65.940,65.700,117.300,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,sequential,remove,193.160,192.540,291.220,7
+e2,indexed[std-hash],10000,0.5,sequential,insert_new,64.200,63.020,70.160,7
+e2,indexed[std-hash],10000,0.5,sequential,upsert,27.460,27.060,28.360,7
+e2,indexed[std-hash],10000,0.5,sequential,get_hit,28.540,28.400,59.140,7
+e2,indexed[std-hash],10000,0.5,sequential,get_miss,27.120,27.020,36.160,7
+e2,indexed[std-hash],10000,0.5,sequential,remove,69.180,68.120,76.340,7
+e2,k-tries[btree-packed7],10000,0.5,sequential,insert_new,238.380,232.260,342.940,7
+e2,k-tries[btree-packed7],10000,0.5,sequential,upsert,204.700,197.260,250.600,7
+e2,k-tries[btree-packed7],10000,0.5,sequential,get_hit,84.660,83.800,175.240,7
+e2,k-tries[btree-packed7],10000,0.5,sequential,get_miss,83.540,83.220,125.480,7
+e2,k-tries[btree-packed7],10000,0.5,sequential,remove,348.220,343.740,618.680,7
+e2,std HashMap (SipHash),10000,0.5,sequential,insert_new,13.380,13.320,13.820,7
+e2,std HashMap (SipHash),10000,0.5,sequential,upsert,11.420,11.360,11.460,7
+e2,std HashMap (SipHash),10000,0.5,sequential,get_hit,11.100,11.080,11.680,7
+e2,std HashMap (SipHash),10000,0.5,sequential,get_miss,9.880,9.860,9.920,7
+e2,std HashMap (SipHash),10000,0.5,sequential,remove,11.200,11.180,11.240,7
+e2,std HashMap (Fx hasher),10000,0.5,sequential,insert_new,7.420,6.900,11.120,7
+e2,std HashMap (Fx hasher),10000,0.5,sequential,upsert,4.920,4.880,12.260,7
+e2,std HashMap (Fx hasher),10000,0.5,sequential,get_hit,2.820,2.760,3.620,7
+e2,std HashMap (Fx hasher),10000,0.5,sequential,get_miss,2.420,2.340,2.480,7
+e2,std HashMap (Fx hasher),10000,0.5,sequential,remove,5.460,5.300,9.260,7
+e2,slow-partition,10000,0.5,random,insert_new,7.220,7.100,12.680,7
+e2,slow-partition,10000,0.5,random,upsert,213.340,209.140,597.640,7
+e2,slow-partition,10000,0.5,random,get_hit,210.440,209.880,329.000,7
+e2,slow-partition,10000,0.5,random,get_miss,392.640,383.700,521.460,7
+e2,slow-partition,10000,0.5,random,remove,151.420,120.020,192.020,7
+e2,indexed[btree-packed7],10000,0.5,random,insert_new,146.880,140.260,206.340,7
+e2,indexed[btree-packed7],10000,0.5,random,upsert,82.880,79.720,239.160,7
+e2,indexed[btree-packed7],10000,0.5,random,get_hit,77.960,77.720,111.380,7
+e2,indexed[btree-packed7],10000,0.5,random,get_miss,77.380,76.900,84.920,7
+e2,indexed[btree-packed7],10000,0.5,random,remove,245.440,226.020,574.080,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,random,insert_new,99.780,97.980,148.360,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,random,upsert,62.800,62.280,71.100,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,random,get_hit,68.580,67.760,82.540,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,random,get_miss,66.300,65.940,76.780,7
+e2,indexed[std-btree] (thesis-like),10000,0.5,random,remove,195.340,192.700,284.800,7
+e2,indexed[std-hash],10000,0.5,random,insert_new,68.540,64.400,100.820,7
+e2,indexed[std-hash],10000,0.5,random,upsert,27.940,27.120,131.360,7
+e2,indexed[std-hash],10000,0.5,random,get_hit,29.660,28.320,55.760,7
+e2,indexed[std-hash],10000,0.5,random,get_miss,27.320,26.980,37.000,7
+e2,indexed[std-hash],10000,0.5,random,remove,71.480,68.260,337.900,7
+e2,k-tries[btree-packed7],10000,0.5,random,insert_new,293.580,235.500,433.940,7
+e2,k-tries[btree-packed7],10000,0.5,random,upsert,197.820,191.800,374.960,7
+e2,k-tries[btree-packed7],10000,0.5,random,get_hit,86.100,83.700,93.720,7
+e2,k-tries[btree-packed7],10000,0.5,random,get_miss,82.740,82.380,87.600,7
+e2,k-tries[btree-packed7],10000,0.5,random,remove,355.980,337.260,544.380,7
+e2,std HashMap (SipHash),10000,0.5,random,insert_new,13.800,13.740,14.900,7
+e2,std HashMap (SipHash),10000,0.5,random,upsert,11.440,11.300,15.400,7
+e2,std HashMap (SipHash),10000,0.5,random,get_hit,11.100,11.080,12.020,7
+e2,std HashMap (SipHash),10000,0.5,random,get_miss,10.060,10.020,10.640,7
+e2,std HashMap (SipHash),10000,0.5,random,remove,11.460,11.420,14.820,7
+e2,std HashMap (Fx hasher),10000,0.5,random,insert_new,7.160,7.140,7.220,7
+e2,std HashMap (Fx hasher),10000,0.5,random,upsert,4.880,4.880,4.900,7
+e2,std HashMap (Fx hasher),10000,0.5,random,get_hit,2.820,2.800,2.840,7
+e2,std HashMap (Fx hasher),10000,0.5,random,get_miss,2.280,2.280,2.300,7
+e2,std HashMap (Fx hasher),10000,0.5,random,remove,5.440,5.420,5.440,7
+e2,slow-partition,10000,0.9,sequential,insert_new,7.644,7.367,12.289,7
+e2,slow-partition,10000,0.9,sequential,upsert,356.789,354.633,548.222,7
+e2,slow-partition,10000,0.9,sequential,get_hit,356.211,354.933,565.478,7
+e2,slow-partition,10000,0.9,sequential,get_miss,788.567,677.911,936.144,7
+e2,slow-partition,10000,0.9,sequential,remove,190.900,190.367,357.744,7
+e2,indexed[btree-packed7],10000,0.9,sequential,insert_new,162.167,156.033,184.911,7
+e2,indexed[btree-packed7],10000,0.9,sequential,upsert,87.656,87.344,117.733,7
+e2,indexed[btree-packed7],10000,0.9,sequential,get_hit,85.400,84.578,88.967,7
+e2,indexed[btree-packed7],10000,0.9,sequential,get_miss,81.256,80.967,234.300,7
+e2,indexed[btree-packed7],10000,0.9,sequential,remove,301.022,266.589,502.400,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,sequential,insert_new,104.567,103.478,131.756,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,sequential,upsert,69.811,69.044,76.056,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,sequential,get_hit,75.622,74.978,103.956,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,sequential,get_miss,72.178,71.800,336.733,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,sequential,remove,215.011,211.589,275.489,7
+e2,indexed[std-hash],10000,0.9,sequential,insert_new,88.567,65.467,100.033,7
+e2,indexed[std-hash],10000,0.9,sequential,upsert,30.856,30.356,50.189,7
+e2,indexed[std-hash],10000,0.9,sequential,get_hit,32.378,32.078,75.700,7
+e2,indexed[std-hash],10000,0.9,sequential,get_miss,26.656,26.578,38.422,7
+e2,indexed[std-hash],10000,0.9,sequential,remove,72.700,72.111,217.678,7
+e2,k-tries[btree-packed7],10000,0.9,sequential,insert_new,253.011,248.378,374.156,7
+e2,k-tries[btree-packed7],10000,0.9,sequential,upsert,203.700,200.622,331.556,7
+e2,k-tries[btree-packed7],10000,0.9,sequential,get_hit,88.711,88.411,115.122,7
+e2,k-tries[btree-packed7],10000,0.9,sequential,get_miss,85.400,85.167,239.800,7
+e2,k-tries[btree-packed7],10000,0.9,sequential,remove,386.978,374.978,624.311,7
+e2,std HashMap (SipHash),10000,0.9,sequential,insert_new,13.800,13.678,13.856,7
+e2,std HashMap (SipHash),10000,0.9,sequential,upsert,11.478,11.400,11.500,7
+e2,std HashMap (SipHash),10000,0.9,sequential,get_hit,11.144,11.122,11.189,7
+e2,std HashMap (SipHash),10000,0.9,sequential,get_miss,10.511,10.411,10.622,7
+e2,std HashMap (SipHash),10000,0.9,sequential,remove,12.356,12.267,12.756,7
+e2,std HashMap (Fx hasher),10000,0.9,sequential,insert_new,7.900,7.833,12.500,7
+e2,std HashMap (Fx hasher),10000,0.9,sequential,upsert,4.933,4.889,16.333,7
+e2,std HashMap (Fx hasher),10000,0.9,sequential,get_hit,2.833,2.767,10.378,7
+e2,std HashMap (Fx hasher),10000,0.9,sequential,get_miss,2.211,2.211,3.389,7
+e2,std HashMap (Fx hasher),10000,0.9,sequential,remove,5.444,5.433,14.811,7
+e2,slow-partition,10000,0.9,random,insert_new,7.511,7.311,7.678,7
+e2,slow-partition,10000,0.9,random,upsert,356.456,354.233,954.067,7
+e2,slow-partition,10000,0.9,random,get_hit,370.233,355.922,670.456,7
+e2,slow-partition,10000,0.9,random,get_miss,772.467,672.389,983.522,7
+e2,slow-partition,10000,0.9,random,remove,195.278,190.122,498.756,7
+e2,indexed[btree-packed7],10000,0.9,random,insert_new,155.033,154.233,382.200,7
+e2,indexed[btree-packed7],10000,0.9,random,upsert,86.356,86.044,505.467,7
+e2,indexed[btree-packed7],10000,0.9,random,get_hit,86.833,83.700,211.089,7
+e2,indexed[btree-packed7],10000,0.9,random,get_miss,100.956,81.033,419.222,7
+e2,indexed[btree-packed7],10000,0.9,random,remove,270.589,261.611,1078.967,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,random,insert_new,104.911,103.856,153.156,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,random,upsert,70.767,69.600,84.378,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,random,get_hit,76.267,75.578,90.078,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,random,get_miss,72.778,72.267,91.744,7
+e2,indexed[std-btree] (thesis-like),10000,0.9,random,remove,213.456,210.444,577.822,7
+e2,indexed[std-hash],10000,0.9,random,insert_new,67.433,66.144,88.300,7
+e2,indexed[std-hash],10000,0.9,random,upsert,30.589,30.256,55.300,7
+e2,indexed[std-hash],10000,0.9,random,get_hit,32.167,32.011,34.078,7
+e2,indexed[std-hash],10000,0.9,random,get_miss,26.767,26.633,29.789,7
+e2,indexed[std-hash],10000,0.9,random,remove,72.711,72.067,384.756,7
+e2,k-tries[btree-packed7],10000,0.9,random,insert_new,277.344,255.300,420.378,7
+e2,k-tries[btree-packed7],10000,0.9,random,upsert,210.611,202.167,325.933,7
+e2,k-tries[btree-packed7],10000,0.9,random,get_hit,88.878,88.511,166.756,7
+e2,k-tries[btree-packed7],10000,0.9,random,get_miss,91.589,85.511,110.278,7
+e2,k-tries[btree-packed7],10000,0.9,random,remove,387.733,377.056,671.500,7
+e2,std HashMap (SipHash),10000,0.9,random,insert_new,13.889,13.744,28.211,7
+e2,std HashMap (SipHash),10000,0.9,random,upsert,11.489,11.422,23.789,7
+e2,std HashMap (SipHash),10000,0.9,random,get_hit,11.178,11.133,22.378,7
+e2,std HashMap (SipHash),10000,0.9,random,get_miss,10.622,10.433,15.744,7
+e2,std HashMap (SipHash),10000,0.9,random,remove,12.678,12.167,23.789,7
+e2,std HashMap (Fx hasher),10000,0.9,random,insert_new,7.100,6.956,12.222,7
+e2,std HashMap (Fx hasher),10000,0.9,random,upsert,5.911,5.011,11.233,7
+e2,std HashMap (Fx hasher),10000,0.9,random,get_hit,3.111,2.878,88.367,7
+e2,std HashMap (Fx hasher),10000,0.9,random,get_miss,3.011,2.811,5.478,7
+e2,std HashMap (Fx hasher),10000,0.9,random,remove,7.033,6.378,11.022,7
+e2,slow-partition,100000,0.5,sequential,insert_new,7.642,7.566,10.076,7
+e2,slow-partition,100000,0.5,sequential,upsert,406.492,391.110,453.456,7
+e2,slow-partition,100000,0.5,sequential,get_hit,450.102,400.606,515.492,7
+e2,slow-partition,100000,0.5,sequential,get_miss,824.986,802.630,910.272,7
+e2,slow-partition,100000,0.5,sequential,remove,223.564,214.434,273.096,7
+e2,indexed[btree-packed7],100000,0.5,sequential,insert_new,260.130,188.428,269.252,7
+e2,indexed[btree-packed7],100000,0.5,sequential,upsert,154.972,112.336,207.990,7
+e2,indexed[btree-packed7],100000,0.5,sequential,get_hit,133.718,106.734,180.848,7
+e2,indexed[btree-packed7],100000,0.5,sequential,get_miss,122.758,102.906,176.792,7
+e2,indexed[btree-packed7],100000,0.5,sequential,remove,403.880,343.396,470.076,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,sequential,insert_new,165.382,129.598,217.280,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,sequential,upsert,97.012,87.420,142.640,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,sequential,get_hit,131.400,91.058,205.770,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,sequential,get_miss,92.628,88.836,149.128,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,sequential,remove,288.414,276.812,380.832,7
+e2,indexed[std-hash],100000,0.5,sequential,insert_new,90.496,83.336,124.606,7
+e2,indexed[std-hash],100000,0.5,sequential,upsert,56.116,49.564,144.988,7
+e2,indexed[std-hash],100000,0.5,sequential,get_hit,59.506,47.606,151.152,7
+e2,indexed[std-hash],100000,0.5,sequential,get_miss,27.806,27.770,35.082,7
+e2,indexed[std-hash],100000,0.5,sequential,remove,130.808,114.794,206.892,7
+e2,k-tries[btree-packed7],100000,0.5,sequential,insert_new,327.632,287.694,367.772,7
+e2,k-tries[btree-packed7],100000,0.5,sequential,upsert,317.998,258.438,406.644,7
+e2,k-tries[btree-packed7],100000,0.5,sequential,get_hit,150.992,110.490,177.006,7
+e2,k-tries[btree-packed7],100000,0.5,sequential,get_miss,130.426,106.392,193.638,7
+e2,k-tries[btree-packed7],100000,0.5,sequential,remove,502.688,488.914,630.448,7
+e2,std HashMap (SipHash),100000,0.5,sequential,insert_new,24.388,23.746,75.032,7
+e2,std HashMap (SipHash),100000,0.5,sequential,upsert,17.470,17.284,45.720,7
+e2,std HashMap (SipHash),100000,0.5,sequential,get_hit,16.692,16.550,18.576,7
+e2,std HashMap (SipHash),100000,0.5,sequential,get_miss,11.374,11.306,36.030,7
+e2,std HashMap (SipHash),100000,0.5,sequential,remove,18.432,15.870,24.960,7
+e2,std HashMap (Fx hasher),100000,0.5,sequential,insert_new,18.180,17.766,74.914,7
+e2,std HashMap (Fx hasher),100000,0.5,sequential,upsert,8.748,8.372,36.640,7
+e2,std HashMap (Fx hasher),100000,0.5,sequential,get_hit,5.034,4.626,9.760,7
+e2,std HashMap (Fx hasher),100000,0.5,sequential,get_miss,2.410,2.244,3.460,7
+e2,std HashMap (Fx hasher),100000,0.5,sequential,remove,8.520,7.700,11.948,7
+e2,slow-partition,100000,0.5,random,insert_new,8.136,7.588,9.836,7
+e2,slow-partition,100000,0.5,random,upsert,439.986,403.866,493.200,7
+e2,slow-partition,100000,0.5,random,get_hit,511.726,404.030,522.444,7
+e2,slow-partition,100000,0.5,random,get_miss,855.544,806.026,984.942,7
+e2,slow-partition,100000,0.5,random,remove,231.854,211.830,354.310,7
+e2,indexed[btree-packed7],100000,0.5,random,insert_new,211.356,189.164,260.876,7
+e2,indexed[btree-packed7],100000,0.5,random,upsert,145.348,111.166,210.780,7
+e2,indexed[btree-packed7],100000,0.5,random,get_hit,139.654,106.934,155.074,7
+e2,indexed[btree-packed7],100000,0.5,random,get_miss,106.154,103.980,161.566,7
+e2,indexed[btree-packed7],100000,0.5,random,remove,376.842,338.572,435.290,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,random,insert_new,143.468,119.624,187.930,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,random,upsert,88.168,87.386,123.766,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,random,get_hit,95.340,91.774,168.106,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,random,get_miss,112.692,88.644,144.722,7
+e2,indexed[std-btree] (thesis-like),100000,0.5,random,remove,288.374,274.510,463.700,7
+e2,indexed[std-hash],100000,0.5,random,insert_new,87.800,67.504,116.136,7
+e2,indexed[std-hash],100000,0.5,random,upsert,70.976,48.152,94.160,7
+e2,indexed[std-hash],100000,0.5,random,get_hit,56.646,46.928,102.838,7
+e2,indexed[std-hash],100000,0.5,random,get_miss,29.490,27.820,61.314,7
+e2,indexed[std-hash],100000,0.5,random,remove,112.872,95.816,186.384,7
+e2,k-tries[btree-packed7],100000,0.5,random,insert_new,351.978,325.704,394.850,7
+e2,k-tries[btree-packed7],100000,0.5,random,upsert,298.248,281.596,430.930,7
+e2,k-tries[btree-packed7],100000,0.5,random,get_hit,155.086,116.050,177.308,7
+e2,k-tries[btree-packed7],100000,0.5,random,get_miss,130.598,110.118,151.202,7
+e2,k-tries[btree-packed7],100000,0.5,random,remove,543.758,498.698,597.378,7
+e2,std HashMap (SipHash),100000,0.5,random,insert_new,24.040,23.826,54.316,7
+e2,std HashMap (SipHash),100000,0.5,random,upsert,17.494,17.330,55.644,7
+e2,std HashMap (SipHash),100000,0.5,random,get_hit,16.720,16.642,19.596,7
+e2,std HashMap (SipHash),100000,0.5,random,get_miss,11.378,11.262,23.568,7
+e2,std HashMap (SipHash),100000,0.5,random,remove,15.948,15.860,41.348,7
+e2,std HashMap (Fx hasher),100000,0.5,random,insert_new,17.618,17.466,24.822,7
+e2,std HashMap (Fx hasher),100000,0.5,random,upsert,8.560,8.490,12.566,7
+e2,std HashMap (Fx hasher),100000,0.5,random,get_hit,4.796,4.696,6.056,7
+e2,std HashMap (Fx hasher),100000,0.5,random,get_miss,2.860,2.796,3.256,7
+e2,std HashMap (Fx hasher),100000,0.5,random,remove,7.944,7.782,40.436,7
+e2,slow-partition,100000,0.9,sequential,insert_new,7.596,7.541,11.118,7
+e2,slow-partition,100000,0.9,sequential,upsert,781.503,724.073,842.159,7
+e2,slow-partition,100000,0.9,sequential,get_hit,805.413,774.067,1105.188,7
+e2,slow-partition,100000,0.9,sequential,get_miss,1546.377,1496.041,1612.880,7
+e2,slow-partition,100000,0.9,sequential,remove,412.028,373.160,454.082,7
+e2,indexed[btree-packed7],100000,0.9,sequential,insert_new,250.981,203.571,259.979,7
+e2,indexed[btree-packed7],100000,0.9,sequential,upsert,157.690,140.350,223.069,7
+e2,indexed[btree-packed7],100000,0.9,sequential,get_hit,178.922,130.272,181.832,7
+e2,indexed[btree-packed7],100000,0.9,sequential,get_miss,159.844,136.317,187.823,7
+e2,indexed[btree-packed7],100000,0.9,sequential,remove,469.577,459.558,597.483,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,sequential,insert_new,149.058,142.977,179.937,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,sequential,upsert,139.264,119.487,165.661,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,sequential,get_hit,158.421,134.434,208.160,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,sequential,get_miss,121.496,99.559,145.516,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,sequential,remove,347.894,323.629,437.800,7
+e2,indexed[std-hash],100000,0.9,sequential,insert_new,81.061,72.374,98.060,7
+e2,indexed[std-hash],100000,0.9,sequential,upsert,73.686,66.937,94.360,7
+e2,indexed[std-hash],100000,0.9,sequential,get_hit,92.517,64.543,110.462,7
+e2,indexed[std-hash],100000,0.9,sequential,get_miss,35.876,28.414,48.562,7
+e2,indexed[std-hash],100000,0.9,sequential,remove,179.024,157.126,215.510,7
+e2,k-tries[btree-packed7],100000,0.9,sequential,insert_new,345.330,312.074,378.422,7
+e2,k-tries[btree-packed7],100000,0.9,sequential,upsert,339.230,294.379,369.931,7
+e2,k-tries[btree-packed7],100000,0.9,sequential,get_hit,156.581,145.838,187.129,7
+e2,k-tries[btree-packed7],100000,0.9,sequential,get_miss,154.242,129.318,178.261,7
+e2,k-tries[btree-packed7],100000,0.9,sequential,remove,607.977,589.260,686.543,7
+e2,std HashMap (SipHash),100000,0.9,sequential,insert_new,21.130,20.956,22.378,7
+e2,std HashMap (SipHash),100000,0.9,sequential,upsert,17.646,17.590,38.590,7
+e2,std HashMap (SipHash),100000,0.9,sequential,get_hit,16.889,16.843,17.011,7
+e2,std HashMap (SipHash),100000,0.9,sequential,get_miss,13.119,13.050,45.181,7
+e2,std HashMap (SipHash),100000,0.9,sequential,remove,29.509,19.236,73.170,7
+e2,std HashMap (Fx hasher),100000,0.9,sequential,insert_new,15.144,14.119,16.746,7
+e2,std HashMap (Fx hasher),100000,0.9,sequential,upsert,8.698,8.499,42.324,7
+e2,std HashMap (Fx hasher),100000,0.9,sequential,get_hit,4.872,4.757,6.313,7
+e2,std HashMap (Fx hasher),100000,0.9,sequential,get_miss,2.322,2.201,3.183,7
+e2,std HashMap (Fx hasher),100000,0.9,sequential,remove,7.894,7.839,26.942,7
+e2,slow-partition,100000,0.9,random,insert_new,7.619,7.537,22.291,7
+e2,slow-partition,100000,0.9,random,upsert,787.946,746.344,1078.558,7
+e2,slow-partition,100000,0.9,random,get_hit,814.180,771.634,937.148,7
+e2,slow-partition,100000,0.9,random,get_miss,1504.739,1463.760,1620.322,7
+e2,slow-partition,100000,0.9,random,remove,405.359,381.947,460.051,7
+e2,indexed[btree-packed7],100000,0.9,random,insert_new,237.278,214.182,244.812,7
+e2,indexed[btree-packed7],100000,0.9,random,upsert,179.129,122.369,209.263,7
+e2,indexed[btree-packed7],100000,0.9,random,get_hit,151.212,140.344,217.306,7
+e2,indexed[btree-packed7],100000,0.9,random,get_miss,129.903,121.561,192.350,7
+e2,indexed[btree-packed7],100000,0.9,random,remove,492.026,431.261,727.894,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,random,insert_new,154.139,142.156,186.392,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,random,upsert,154.664,102.268,166.634,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,random,get_hit,141.814,119.997,207.170,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,random,get_miss,119.808,102.168,150.886,7
+e2,indexed[std-btree] (thesis-like),100000,0.9,random,remove,355.086,313.727,409.744,7
+e2,indexed[std-hash],100000,0.9,random,insert_new,106.876,79.521,134.457,7
+e2,indexed[std-hash],100000,0.9,random,upsert,134.369,71.974,164.431,7
+e2,indexed[std-hash],100000,0.9,random,get_hit,146.393,81.020,250.262,7
+e2,indexed[std-hash],100000,0.9,random,get_miss,44.514,28.744,56.593,7
+e2,indexed[std-hash],100000,0.9,random,remove,224.802,153.097,351.709,7
+e2,k-tries[btree-packed7],100000,0.9,random,insert_new,380.280,354.123,605.834,7
+e2,k-tries[btree-packed7],100000,0.9,random,upsert,345.434,315.084,406.092,7
+e2,k-tries[btree-packed7],100000,0.9,random,get_hit,155.328,141.326,268.253,7
+e2,k-tries[btree-packed7],100000,0.9,random,get_miss,165.501,136.000,192.603,7
+e2,k-tries[btree-packed7],100000,0.9,random,remove,659.440,582.828,689.590,7
+e2,std HashMap (SipHash),100000,0.9,random,insert_new,21.226,20.842,33.164,7
+e2,std HashMap (SipHash),100000,0.9,random,upsert,17.832,17.620,70.121,7
+e2,std HashMap (SipHash),100000,0.9,random,get_hit,16.952,16.872,29.474,7
+e2,std HashMap (SipHash),100000,0.9,random,get_miss,13.082,13.040,44.869,7
+e2,std HashMap (SipHash),100000,0.9,random,remove,21.362,19.099,42.821,7
+e2,std HashMap (Fx hasher),100000,0.9,random,insert_new,15.013,14.638,52.512,7
+e2,std HashMap (Fx hasher),100000,0.9,random,upsert,8.812,8.743,23.450,7
+e2,std HashMap (Fx hasher),100000,0.9,random,get_hit,5.173,5.083,6.912,7
+e2,std HashMap (Fx hasher),100000,0.9,random,get_miss,4.400,4.346,4.488,7
+e2,std HashMap (Fx hasher),100000,0.9,random,remove,11.224,11.051,28.436,7
+e2,slow-partition,1000000,0.5,sequential,insert_new,12.153,7.972,13.111,5
+e2,slow-partition,1000000,0.5,sequential,upsert,841.452,798.211,852.140,5
+e2,slow-partition,1000000,0.5,sequential,get_hit,903.827,882.433,914.043,5
+e2,slow-partition,1000000,0.5,sequential,get_miss,1632.720,1548.971,3189.381,5
+e2,slow-partition,1000000,0.5,sequential,remove,454.813,414.478,768.526,5
+e2,indexed[btree-packed7],1000000,0.5,sequential,insert_new,585.728,511.383,951.131,5
+e2,indexed[btree-packed7],1000000,0.5,sequential,upsert,834.510,598.474,1017.710,5
+e2,indexed[btree-packed7],1000000,0.5,sequential,get_hit,684.132,566.434,928.486,5
+e2,indexed[btree-packed7],1000000,0.5,sequential,get_miss,416.317,405.497,745.791,5
+e2,indexed[btree-packed7],1000000,0.5,sequential,remove,1303.678,1222.580,1744.356,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,sequential,insert_new,492.699,372.336,665.194,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,sequential,upsert,669.020,387.109,1063.646,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,sequential,get_hit,566.146,405.898,723.542,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,sequential,get_miss,587.465,343.880,724.925,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,sequential,remove,1353.224,898.174,1570.186,5
+e2,indexed[std-hash],1000000,0.5,sequential,insert_new,262.769,220.856,314.729,5
+e2,indexed[std-hash],1000000,0.5,sequential,upsert,532.863,520.452,609.350,5
+e2,indexed[std-hash],1000000,0.5,sequential,get_hit,529.912,501.535,659.077,5
+e2,indexed[std-hash],1000000,0.5,sequential,get_miss,113.166,76.773,229.871,5
+e2,indexed[std-hash],1000000,0.5,sequential,remove,852.195,771.947,1095.182,5
+e2,k-tries[btree-packed7],1000000,0.5,sequential,insert_new,1135.255,909.487,1337.066,5
+e2,k-tries[btree-packed7],1000000,0.5,sequential,upsert,1384.011,1331.285,1445.617,5
+e2,k-tries[btree-packed7],1000000,0.5,sequential,get_hit,972.091,961.024,1091.798,5
+e2,k-tries[btree-packed7],1000000,0.5,sequential,get_miss,694.275,632.358,913.355,5
+e2,k-tries[btree-packed7],1000000,0.5,sequential,remove,2675.997,2287.672,2969.145,5
+e2,std HashMap (SipHash),1000000,0.5,sequential,insert_new,158.386,129.414,281.753,5
+e2,std HashMap (SipHash),1000000,0.5,sequential,upsert,262.904,211.067,323.638,5
+e2,std HashMap (SipHash),1000000,0.5,sequential,get_hit,216.343,208.534,326.064,5
+e2,std HashMap (SipHash),1000000,0.5,sequential,get_miss,74.423,51.633,129.311,5
+e2,std HashMap (SipHash),1000000,0.5,sequential,remove,248.885,190.365,292.132,5
+e2,std HashMap (Fx hasher),1000000,0.5,sequential,insert_new,184.952,160.951,258.169,5
+e2,std HashMap (Fx hasher),1000000,0.5,sequential,upsert,190.244,165.077,245.798,5
+e2,std HashMap (Fx hasher),1000000,0.5,sequential,get_hit,115.654,74.148,184.753,5
+e2,std HashMap (Fx hasher),1000000,0.5,sequential,get_miss,29.388,7.552,42.851,5
+e2,std HashMap (Fx hasher),1000000,0.5,sequential,remove,187.596,146.975,298.910,5
+e2,slow-partition,1000000,0.5,random,insert_new,19.091,14.460,27.999,5
+e2,slow-partition,1000000,0.5,random,upsert,1828.002,1338.622,1958.457,5
+e2,slow-partition,1000000,0.5,random,get_hit,1890.256,1568.919,2215.125,5
+e2,slow-partition,1000000,0.5,random,get_miss,3792.937,3081.217,4529.178,5
+e2,slow-partition,1000000,0.5,random,remove,986.385,813.052,1244.992,5
+e2,indexed[btree-packed7],1000000,0.5,random,insert_new,791.178,718.475,1140.672,5
+e2,indexed[btree-packed7],1000000,0.5,random,upsert,912.200,789.862,937.833,5
+e2,indexed[btree-packed7],1000000,0.5,random,get_hit,1006.206,803.041,1234.035,5
+e2,indexed[btree-packed7],1000000,0.5,random,get_miss,750.950,657.503,927.699,5
+e2,indexed[btree-packed7],1000000,0.5,random,remove,2166.858,2018.175,2436.962,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,random,insert_new,604.147,542.690,679.131,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,random,upsert,700.446,610.495,791.091,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,random,get_hit,750.808,582.703,829.241,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,random,get_miss,592.474,554.246,962.673,5
+e2,indexed[std-btree] (thesis-like),1000000,0.5,random,remove,1572.733,1383.825,2135.555,5
+e2,indexed[std-hash],1000000,0.5,random,insert_new,353.715,257.416,379.823,5
+e2,indexed[std-hash],1000000,0.5,random,upsert,554.714,520.717,692.257,5
+e2,indexed[std-hash],1000000,0.5,random,get_hit,563.938,511.714,715.916,5
+e2,indexed[std-hash],1000000,0.5,random,get_miss,132.744,115.067,240.837,5
+e2,indexed[std-hash],1000000,0.5,random,remove,1116.165,932.064,1453.533,5
+e2,k-tries[btree-packed7],1000000,0.5,random,insert_new,1150.467,1092.507,1303.237,5
+e2,k-tries[btree-packed7],1000000,0.5,random,upsert,1437.743,1264.159,1521.874,5
+e2,k-tries[btree-packed7],1000000,0.5,random,get_hit,963.109,936.416,986.176,5
+e2,k-tries[btree-packed7],1000000,0.5,random,get_miss,768.234,743.829,829.704,5
+e2,k-tries[btree-packed7],1000000,0.5,random,remove,2506.261,2376.134,2603.787,5
+e2,std HashMap (SipHash),1000000,0.5,random,insert_new,202.590,159.082,252.886,5
+e2,std HashMap (SipHash),1000000,0.5,random,upsert,241.798,184.759,258.774,5
+e2,std HashMap (SipHash),1000000,0.5,random,get_hit,215.966,183.982,238.556,5
+e2,std HashMap (SipHash),1000000,0.5,random,get_miss,79.104,72.094,102.668,5
+e2,std HashMap (SipHash),1000000,0.5,random,remove,250.637,173.147,268.738,5
+e2,std HashMap (Fx hasher),1000000,0.5,random,insert_new,166.137,130.401,215.465,5
+e2,std HashMap (Fx hasher),1000000,0.5,random,upsert,258.936,157.350,302.873,5
+e2,std HashMap (Fx hasher),1000000,0.5,random,get_hit,85.847,54.575,134.821,5
+e2,std HashMap (Fx hasher),1000000,0.5,random,get_miss,25.380,8.832,51.350,5
+e2,std HashMap (Fx hasher),1000000,0.5,random,remove,169.212,139.498,250.650,5
+e2,slow-partition,1000000,0.9,sequential,insert_new,16.679,9.651,23.102,5
+e2,slow-partition,1000000,0.9,sequential,upsert,3704.361,3139.059,4804.915,5
+e2,slow-partition,1000000,0.9,sequential,get_hit,3969.332,3390.699,4655.221,5
+e2,slow-partition,1000000,0.9,sequential,get_miss,8527.417,6697.583,9562.986,5
+e2,slow-partition,1000000,0.9,sequential,remove,1814.774,1635.485,2442.283,5
+e2,indexed[btree-packed7],1000000,0.9,sequential,insert_new,1038.787,1010.561,1493.399,5
+e2,indexed[btree-packed7],1000000,0.9,sequential,upsert,1230.851,1108.710,1662.357,5
+e2,indexed[btree-packed7],1000000,0.9,sequential,get_hit,1122.268,1095.945,1509.608,5
+e2,indexed[btree-packed7],1000000,0.9,sequential,get_miss,875.353,859.582,999.257,5
+e2,indexed[btree-packed7],1000000,0.9,sequential,remove,2417.305,2344.278,2559.429,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,sequential,insert_new,909.628,745.445,1139.384,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,sequential,upsert,1044.819,757.871,1148.210,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,sequential,get_hit,952.447,827.214,975.744,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,sequential,get_miss,857.965,787.733,888.799,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,sequential,remove,2073.738,1920.857,2197.028,5
+e2,indexed[std-hash],1000000,0.9,sequential,insert_new,317.100,226.172,373.409,5
+e2,indexed[std-hash],1000000,0.9,sequential,upsert,573.688,532.769,705.856,5
+e2,indexed[std-hash],1000000,0.9,sequential,get_hit,621.633,548.556,872.211,5
+e2,indexed[std-hash],1000000,0.9,sequential,get_miss,178.638,163.164,342.921,5
+e2,indexed[std-hash],1000000,0.9,sequential,remove,1031.590,909.452,1178.780,5
+e2,k-tries[btree-packed7],1000000,0.9,sequential,insert_new,1273.038,1103.354,1465.240,5
+e2,k-tries[btree-packed7],1000000,0.9,sequential,upsert,1778.291,1469.531,2139.873,5
+e2,k-tries[btree-packed7],1000000,0.9,sequential,get_hit,1359.940,1042.566,1431.442,5
+e2,k-tries[btree-packed7],1000000,0.9,sequential,get_miss,951.313,750.190,1369.167,5
+e2,k-tries[btree-packed7],1000000,0.9,sequential,remove,3040.058,2459.799,3420.218,5
+e2,std HashMap (SipHash),1000000,0.9,sequential,insert_new,135.495,133.874,162.456,5
+e2,std HashMap (SipHash),1000000,0.9,sequential,upsert,211.486,177.083,243.603,5
+e2,std HashMap (SipHash),1000000,0.9,sequential,get_hit,208.798,187.744,306.608,5
+e2,std HashMap (SipHash),1000000,0.9,sequential,get_miss,71.739,62.262,153.032,5
+e2,std HashMap (SipHash),1000000,0.9,sequential,remove,211.989,176.378,282.919,5
+e2,std HashMap (Fx hasher),1000000,0.9,sequential,insert_new,120.539,106.515,130.692,5
+e2,std HashMap (Fx hasher),1000000,0.9,sequential,upsert,211.822,153.806,232.378,5
+e2,std HashMap (Fx hasher),1000000,0.9,sequential,get_hit,94.812,73.878,121.391,5
+e2,std HashMap (Fx hasher),1000000,0.9,sequential,get_miss,5.687,4.743,74.888,5
+e2,std HashMap (Fx hasher),1000000,0.9,sequential,remove,146.694,131.583,148.757,5
+e2,slow-partition,1000000,0.9,random,insert_new,11.972,8.499,18.173,5
+e2,slow-partition,1000000,0.9,random,upsert,3450.865,2892.082,3512.736,5
+e2,slow-partition,1000000,0.9,random,get_hit,3499.938,3024.913,3586.670,5
+e2,slow-partition,1000000,0.9,random,get_miss,7328.516,5873.420,7483.437,5
+e2,slow-partition,1000000,0.9,random,remove,1694.183,1433.868,2362.446,5
+e2,indexed[btree-packed7],1000000,0.9,random,insert_new,1053.583,870.292,1191.902,5
+e2,indexed[btree-packed7],1000000,0.9,random,upsert,1357.744,1123.205,1482.894,5
+e2,indexed[btree-packed7],1000000,0.9,random,get_hit,1199.569,1044.416,1498.686,5
+e2,indexed[btree-packed7],1000000,0.9,random,get_miss,947.106,882.749,1037.871,5
+e2,indexed[btree-packed7],1000000,0.9,random,remove,2107.190,2055.665,2466.995,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,random,insert_new,770.846,652.498,958.090,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,random,upsert,815.775,735.837,935.948,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,random,get_hit,829.429,730.559,946.310,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,random,get_miss,707.090,623.437,852.545,5
+e2,indexed[std-btree] (thesis-like),1000000,0.9,random,remove,1663.653,1496.852,2220.680,5
+e2,indexed[std-hash],1000000,0.9,random,insert_new,285.175,229.320,430.571,5
+e2,indexed[std-hash],1000000,0.9,random,upsert,638.784,534.053,808.433,5
+e2,indexed[std-hash],1000000,0.9,random,get_hit,634.614,597.575,734.627,5
+e2,indexed[std-hash],1000000,0.9,random,get_miss,181.848,154.834,190.531,5
+e2,indexed[std-hash],1000000,0.9,random,remove,1021.102,997.385,1101.932,5
+e2,k-tries[btree-packed7],1000000,0.9,random,insert_new,1405.380,1230.678,1499.954,5
+e2,k-tries[btree-packed7],1000000,0.9,random,upsert,1728.237,1412.894,1800.034,5
+e2,k-tries[btree-packed7],1000000,0.9,random,get_hit,1111.109,994.674,1177.577,5
+e2,k-tries[btree-packed7],1000000,0.9,random,get_miss,934.885,750.879,1100.693,5
+e2,k-tries[btree-packed7],1000000,0.9,random,remove,3011.204,2367.579,3098.756,5
+e2,std HashMap (SipHash),1000000,0.9,random,insert_new,152.222,149.126,218.202,5
+e2,std HashMap (SipHash),1000000,0.9,random,upsert,260.159,195.067,370.026,5
+e2,std HashMap (SipHash),1000000,0.9,random,get_hit,248.469,221.606,280.446,5
+e2,std HashMap (SipHash),1000000,0.9,random,get_miss,74.753,61.214,100.402,5
+e2,std HashMap (SipHash),1000000,0.9,random,remove,236.662,191.302,272.867,5
+e2,std HashMap (Fx hasher),1000000,0.9,random,insert_new,146.743,111.679,181.471,5
+e2,std HashMap (Fx hasher),1000000,0.9,random,upsert,190.331,147.026,249.417,5
+e2,std HashMap (Fx hasher),1000000,0.9,random,get_hit,77.931,68.977,122.993,5
+e2,std HashMap (Fx hasher),1000000,0.9,random,get_miss,43.986,19.959,59.992,5
+e2,std HashMap (Fx hasher),1000000,0.9,random,remove,150.131,120.778,268.018,5
+e2,indexed[btree-packed7],10000000,0.5,sequential,insert_new,1563.931,1553.906,1622.087,3
+e2,indexed[btree-packed7],10000000,0.5,sequential,upsert,1591.249,1563.288,1715.580,3
+e2,indexed[btree-packed7],10000000,0.5,sequential,get_hit,1563.351,1532.487,1805.664,3
+e2,indexed[btree-packed7],10000000,0.5,sequential,get_miss,1502.971,1460.998,1684.071,3
+e2,indexed[btree-packed7],10000000,0.5,sequential,remove,3150.627,2625.262,3370.907,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,sequential,insert_new,1114.936,1097.341,1173.604,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,sequential,upsert,1125.177,1100.415,1165.447,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,sequential,get_hit,1145.276,1089.286,1206.178,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,sequential,get_miss,1103.642,1044.269,1122.003,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,sequential,remove,2382.006,2333.802,2542.664,3
+e2,indexed[std-hash],10000000,0.5,sequential,insert_new,477.831,458.221,489.493,3
+e2,indexed[std-hash],10000000,0.5,sequential,upsert,698.776,687.544,718.624,3
+e2,indexed[std-hash],10000000,0.5,sequential,get_hit,721.671,719.326,737.739,3
+e2,indexed[std-hash],10000000,0.5,sequential,get_miss,230.904,225.843,256.098,3
+e2,indexed[std-hash],10000000,0.5,sequential,remove,1276.329,1248.253,1368.736,3
+e2,k-tries[btree-packed7],10000000,0.5,sequential,insert_new,1576.781,1542.585,1669.254,3
+e2,k-tries[btree-packed7],10000000,0.5,sequential,upsert,1894.311,1873.146,2016.432,3
+e2,k-tries[btree-packed7],10000000,0.5,sequential,get_hit,1336.890,1298.160,1361.961,3
+e2,k-tries[btree-packed7],10000000,0.5,sequential,get_miss,1219.075,1184.974,1236.446,3
+e2,k-tries[btree-packed7],10000000,0.5,sequential,remove,3244.573,3068.240,3312.724,3
+e2,std HashMap (SipHash),10000000,0.5,sequential,insert_new,293.599,276.884,305.370,3
+e2,std HashMap (SipHash),10000000,0.5,sequential,upsert,349.979,346.321,365.281,3
+e2,std HashMap (SipHash),10000000,0.5,sequential,get_hit,264.519,240.126,268.883,3
+e2,std HashMap (SipHash),10000000,0.5,sequential,get_miss,113.106,112.859,114.528,3
+e2,std HashMap (SipHash),10000000,0.5,sequential,remove,365.627,362.730,380.545,3
+e2,std HashMap (Fx hasher),10000000,0.5,sequential,insert_new,295.748,295.232,301.590,3
+e2,std HashMap (Fx hasher),10000000,0.5,sequential,upsert,363.251,360.900,369.777,3
+e2,std HashMap (Fx hasher),10000000,0.5,sequential,get_hit,91.221,87.974,106.716,3
+e2,std HashMap (Fx hasher),10000000,0.5,sequential,get_miss,34.037,32.268,43.879,3
+e2,std HashMap (Fx hasher),10000000,0.5,sequential,remove,388.121,387.044,390.653,3
+e2,indexed[btree-packed7],10000000,0.5,random,insert_new,1241.082,1222.392,1323.514,3
+e2,indexed[btree-packed7],10000000,0.5,random,upsert,1315.152,1289.094,1351.204,3
+e2,indexed[btree-packed7],10000000,0.5,random,get_hit,1291.434,1287.882,1317.989,3
+e2,indexed[btree-packed7],10000000,0.5,random,get_miss,1180.237,1154.953,1181.830,3
+e2,indexed[btree-packed7],10000000,0.5,random,remove,2638.145,2582.826,2651.525,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,random,insert_new,1080.384,1044.426,1142.415,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,random,upsert,1083.105,1077.208,1243.260,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,random,get_hit,1117.428,1096.183,1140.063,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,random,get_miss,1067.227,1016.962,1078.322,3
+e2,indexed[std-btree] (thesis-like),10000000,0.5,random,remove,2356.156,2317.496,2366.266,3
+e2,indexed[std-hash],10000000,0.5,random,insert_new,483.206,466.955,542.432,3
+e2,indexed[std-hash],10000000,0.5,random,upsert,706.595,675.457,749.536,3
+e2,indexed[std-hash],10000000,0.5,random,get_hit,733.378,712.559,736.042,3
+e2,indexed[std-hash],10000000,0.5,random,get_miss,222.079,214.803,232.175,3
+e2,indexed[std-hash],10000000,0.5,random,remove,1374.817,1349.392,1403.103,3
+e2,k-tries[btree-packed7],10000000,0.5,random,insert_new,1645.707,1620.892,1724.734,3
+e2,k-tries[btree-packed7],10000000,0.5,random,upsert,1934.876,1921.671,1978.498,3
+e2,k-tries[btree-packed7],10000000,0.5,random,get_hit,1299.531,1293.945,1349.274,3
+e2,k-tries[btree-packed7],10000000,0.5,random,get_miss,1207.340,1203.071,1219.895,3
+e2,k-tries[btree-packed7],10000000,0.5,random,remove,3359.689,3280.716,3365.764,3
+e2,std HashMap (SipHash),10000000,0.5,random,insert_new,287.772,275.201,294.297,3
+e2,std HashMap (SipHash),10000000,0.5,random,upsert,344.707,338.522,365.170,3
+e2,std HashMap (SipHash),10000000,0.5,random,get_hit,265.445,250.359,280.377,3
+e2,std HashMap (SipHash),10000000,0.5,random,get_miss,115.852,109.964,124.537,3
+e2,std HashMap (SipHash),10000000,0.5,random,remove,356.427,347.668,369.960,3
+e2,std HashMap (Fx hasher),10000000,0.5,random,insert_new,293.128,279.361,303.538,3
+e2,std HashMap (Fx hasher),10000000,0.5,random,upsert,376.994,367.642,380.722,3
+e2,std HashMap (Fx hasher),10000000,0.5,random,get_hit,92.595,82.265,98.280,3
+e2,std HashMap (Fx hasher),10000000,0.5,random,get_miss,42.490,38.952,45.003,3
+e2,std HashMap (Fx hasher),10000000,0.5,random,remove,408.164,397.182,413.077,3
+e2,indexed[btree-packed7],10000000,0.9,sequential,insert_new,1542.719,1509.764,1558.394,3
+e2,indexed[btree-packed7],10000000,0.9,sequential,upsert,1517.914,1485.286,1529.782,3
+e2,indexed[btree-packed7],10000000,0.9,sequential,get_hit,1485.505,1458.297,1487.502,3
+e2,indexed[btree-packed7],10000000,0.9,sequential,get_miss,1407.598,1393.557,1425.544,3
+e2,indexed[btree-packed7],10000000,0.9,sequential,remove,3098.434,3069.321,3308.718,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,sequential,insert_new,1307.651,1305.994,1456.017,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,sequential,upsert,1406.524,1371.212,1466.419,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,sequential,get_hit,1427.744,1356.065,1435.860,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,sequential,get_miss,1384.496,1379.953,1416.902,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,sequential,remove,2792.129,2767.762,3124.024,3
+e2,indexed[std-hash],10000000,0.9,sequential,insert_new,570.614,530.914,612.117,3
+e2,indexed[std-hash],10000000,0.9,sequential,upsert,742.927,742.399,814.737,3
+e2,indexed[std-hash],10000000,0.9,sequential,get_hit,794.471,779.403,835.128,3
+e2,indexed[std-hash],10000000,0.9,sequential,get_miss,250.059,249.153,269.828,3
+e2,indexed[std-hash],10000000,0.9,sequential,remove,1434.498,1418.074,1479.324,3
+e2,k-tries[btree-packed7],10000000,0.9,sequential,insert_new,1770.386,1745.788,1817.075,3
+e2,k-tries[btree-packed7],10000000,0.9,sequential,upsert,2067.309,2065.683,2110.280,3
+e2,k-tries[btree-packed7],10000000,0.9,sequential,get_hit,1486.701,1477.620,1491.056,3
+e2,k-tries[btree-packed7],10000000,0.9,sequential,get_miss,1406.624,1372.493,1423.543,3
+e2,k-tries[btree-packed7],10000000,0.9,sequential,remove,3699.734,3626.832,3769.979,3
+e2,std HashMap (SipHash),10000000,0.9,sequential,insert_new,271.259,268.050,286.149,3
+e2,std HashMap (SipHash),10000000,0.9,sequential,upsert,348.179,339.378,360.142,3
+e2,std HashMap (SipHash),10000000,0.9,sequential,get_hit,262.367,251.769,266.676,3
+e2,std HashMap (SipHash),10000000,0.9,sequential,get_miss,119.335,115.153,124.507,3
+e2,std HashMap (SipHash),10000000,0.9,sequential,remove,346.073,345.499,354.522,3
+e2,std HashMap (Fx hasher),10000000,0.9,sequential,insert_new,286.610,281.980,297.939,3
+e2,std HashMap (Fx hasher),10000000,0.9,sequential,upsert,363.845,354.197,381.917,3
+e2,std HashMap (Fx hasher),10000000,0.9,sequential,get_hit,87.335,87.083,88.287,3
+e2,std HashMap (Fx hasher),10000000,0.9,sequential,get_miss,33.654,33.208,34.495,3
+e2,std HashMap (Fx hasher),10000000,0.9,sequential,remove,381.239,372.300,391.796,3
+e2,indexed[btree-packed7],10000000,0.9,random,insert_new,1401.932,1361.523,1428.021,3
+e2,indexed[btree-packed7],10000000,0.9,random,upsert,1444.866,1439.184,1463.064,3
+e2,indexed[btree-packed7],10000000,0.9,random,get_hit,1471.253,1434.074,1491.010,3
+e2,indexed[btree-packed7],10000000,0.9,random,get_miss,1320.044,1283.965,1327.007,3
+e2,indexed[btree-packed7],10000000,0.9,random,remove,3001.471,2992.883,3027.906,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,random,insert_new,1268.602,1266.294,1272.986,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,random,upsert,1363.859,1346.869,1366.195,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,random,get_hit,1374.101,1360.824,1378.127,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,random,get_miss,1282.294,1273.158,1289.757,3
+e2,indexed[std-btree] (thesis-like),10000000,0.9,random,remove,2747.649,2734.322,2759.328,3
+e2,indexed[std-hash],10000000,0.9,random,insert_new,511.907,494.630,515.783,3
+e2,indexed[std-hash],10000000,0.9,random,upsert,735.873,735.745,748.137,3
+e2,indexed[std-hash],10000000,0.9,random,get_hit,781.114,768.427,784.274,3
+e2,indexed[std-hash],10000000,0.9,random,get_miss,244.516,238.226,244.579,3
+e2,indexed[std-hash],10000000,0.9,random,remove,1408.537,1383.937,1440.450,3
+e2,k-tries[btree-packed7],10000000,0.9,random,insert_new,1841.262,1831.907,1846.808,3
+e2,k-tries[btree-packed7],10000000,0.9,random,upsert,2099.570,2077.792,2155.086,3
+e2,k-tries[btree-packed7],10000000,0.9,random,get_hit,1472.089,1445.575,1505.236,3
+e2,k-tries[btree-packed7],10000000,0.9,random,get_miss,1328.479,1319.857,1336.782,3
+e2,k-tries[btree-packed7],10000000,0.9,random,remove,3683.902,3675.481,3795.045,3
+e2,std HashMap (SipHash),10000000,0.9,random,insert_new,278.927,260.959,279.501,3
+e2,std HashMap (SipHash),10000000,0.9,random,upsert,348.392,343.717,350.035,3
+e2,std HashMap (SipHash),10000000,0.9,random,get_hit,260.004,259.031,261.108,3
+e2,std HashMap (SipHash),10000000,0.9,random,get_miss,123.288,120.438,124.152,3
+e2,std HashMap (SipHash),10000000,0.9,random,remove,350.179,348.402,359.696,3
+e2,std HashMap (Fx hasher),10000000,0.9,random,insert_new,266.323,250.105,281.476,3
+e2,std HashMap (Fx hasher),10000000,0.9,random,upsert,363.400,361.883,366.874,3
+e2,std HashMap (Fx hasher),10000000,0.9,random,get_hit,90.020,85.834,100.022,3
+e2,std HashMap (Fx hasher),10000000,0.9,random,get_miss,47.281,42.892,53.514,3
+e2,std HashMap (Fx hasher),10000000,0.9,random,remove,383.510,370.096,402.921,3

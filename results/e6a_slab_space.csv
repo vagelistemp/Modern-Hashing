@@ -1,0 +1,11 @@
+experiment,impl,n,fill,key_slot_bits_per_item,mapper_bits_per_item,insert_ns,get_hit_ns
+e6a,indexed (fixed buckets),1000000,0.1,351.3082,57.3056,425.317,423.492
+e6a,indexed (slab buckets),1000000,0.1,35.8298,57.3056,778.310,618.073
+e6a,indexed (fixed buckets),1000000,0.3,117.1027,57.3371,746.184,721.041
+e6a,indexed (slab buckets),1000000,0.3,33.6555,57.3371,724.161,853.320
+e6a,indexed (fixed buckets),1000000,0.5,70.2616,57.3317,847.016,871.558
+e6a,indexed (slab buckets),1000000,0.5,33.0465,57.3317,845.704,934.508
+e6a,indexed (fixed buckets),1000000,0.7,50.1869,57.3328,939.550,1026.515
+e6a,indexed (slab buckets),1000000,0.7,33.1074,57.3328,875.910,1042.071
+e6a,indexed (fixed buckets),1000000,0.9,39.0342,57.3298,652.000,670.954
+e6a,indexed (slab buckets),1000000,0.9,32.8454,57.3298,744.685,710.384

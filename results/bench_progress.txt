@@ -1,0 +1,10 @@
+== e1: per-operation cost vs bucket size
+  wrote results\e1_bucket_size.csv
+== e2: scaling with n and load factor
+  wrote results\e2_scaling.csv
+== e3: latency distribution of single operations
+  wrote results\e3_latency.csv
+== e4: space
+  wrote results\e4_space.csv
+== e5: Four Russians tables
+  wrote results\e5_four_russians.csv

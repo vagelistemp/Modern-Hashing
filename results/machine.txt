@@ -1,0 +1,7 @@
+﻿date:        2026-10-21T02:24:31 (full benchmark started; it ran for 3599 s)
+cpu:         Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz  (2 cores, 4 threads, max 2901 MHz)
+ram:         23.8 GB
+os:          Microsoft Windows 10 Pro 10.0.19045
+rustc:       rustc 1.99.1 (58cf8f9c3 2026-10-13), x86_64-pc-windows-gnu
+cpu load before the run (%): 41 (measured by hand a few minutes before the start; other programs were open)
+note:        machine.txt was rewritten by hand because the first version of run_benchmark.ps1 mis-formatted it; the script is fixed

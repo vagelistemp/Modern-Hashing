@@ -1,0 +1,28 @@
+[package]
+name = "modern_hashing"
+version = "0.1.0"
+edition = "2021"
+description = "Partition hashing after Bender, Farach-Colton, J. Kuszmaul, W. Kuszmaul: 'Modern Hashing Made Simple' (SOSA 2024)"
+license = "MIT"
+authors = ["Evangelos Tempelopoulos"]
+
+# No external crates on purpose: everything (PRNG, test harness, benchmark harness) is in this repository.
+[dependencies]
+
+[lib]
+name = "modern_hashing"
+path = "src/lib.rs"
+
+[[bin]]
+name = "bench"
+path = "src/bin/bench.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+debug = false
+
+[profile.test]
+opt-level = 2

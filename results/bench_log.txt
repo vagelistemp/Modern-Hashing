@@ -1,0 +1,283 @@
+modern_hashing benchmark  (quick = false, big = true, logical cpus = 4)
+
+[e1] n = 262144 keys (random), ns per operation as the mean bucket load grows
+implementation                        load    insert   get-hit  get-miss    remove
+slow-partition                          32     20.5     89.0     75.2     62.5
+indexed[btree-packed7]                  32    297.6    271.5    211.2    518.4
+indexed[std-btree] (thesis-like)        32    273.6    272.4    238.2    416.1
+indexed[std-hash]                       32    270.8    291.1     82.4    444.3
+std HashMap (Fx hasher)                 32     22.2     13.0      5.1     22.7
+slow-partition                         128     13.8     98.6     96.8     69.1
+indexed[btree-packed7]                 128    292.3    264.1    186.7    531.9
+indexed[std-btree] (thesis-like)       128    232.5    273.1    223.3    483.9
+indexed[std-hash]                      128    191.8    255.6     54.6    374.7
+std HashMap (Fx hasher)                128     30.2     13.6      5.2     20.4
+slow-partition                         512      9.6    178.4    259.3     97.4
+indexed[btree-packed7]                 512    303.9    327.0    243.1    694.1
+indexed[std-btree] (thesis-like)       512    237.3    246.5    194.7    498.1
+indexed[std-hash]                      512    160.0    232.9     42.8    384.5
+std HashMap (Fx hasher)                512     19.5     16.0      7.7     28.9
+slow-partition                        2048      9.9    482.4    832.1    230.1
+indexed[btree-packed7]                2048    316.8    341.4    265.4    751.0
+indexed[std-btree] (thesis-like)      2048    236.7    276.2    216.0    563.5
+indexed[std-hash]                     2048    132.2    226.0     44.8    379.6
+std HashMap (Fx hasher)               2048     27.5     18.5      5.2     22.9
+slow-partition                        8192     11.7     1786     3324    814.0
+indexed[btree-packed7]                8192    372.8    400.8    284.7    831.6
+indexed[std-btree] (thesis-like)      8192    229.7    280.1    226.9    574.8
+indexed[std-hash]                     8192    126.9    210.9     49.4    337.7
+std HashMap (Fx hasher)               8192     20.7     19.4      5.1     23.5
+
+[e2] n = 1000, load factor 0.5, sequential keys (500 items), ns per operation   (buckets 1 x 1189 slots, fp 30 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          9.2    114.2    118.6    193.2     71.8
+indexed[btree-packed7]                139.2     72.8     70.0     70.0    230.8
+indexed[std-btree] (thesis-like)       90.2     52.4     58.0     55.0    170.0
+indexed[std-hash]                     111.0     35.2     38.6     35.8     97.8
+k-tries[btree-packed7]                318.4    226.8     86.6     83.4    464.2
+std HashMap (SipHash)                  13.2     10.6     10.2     10.2     11.2
+std HashMap (Fx hasher)                 6.4      4.6      2.6      2.0      5.4
+
+[e2] n = 1000, load factor 0.5, random keys (500 items), ns per operation   (buckets 1 x 1189 slots, fp 30 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          8.0     96.4     96.8    169.6     61.6
+indexed[btree-packed7]                125.8     64.4     62.0     61.8    206.6
+indexed[std-btree] (thesis-like)       91.0     52.8     58.6     55.4    168.8
+indexed[std-hash]                      71.6     25.8     26.8     26.6     64.0
+k-tries[btree-packed7]                239.2    160.0     66.4     66.4    300.0
+std HashMap (SipHash)                  13.2     10.6     10.2     10.2     11.2
+std HashMap (Fx hasher)                 6.4      4.6      2.4      2.4      5.4
+
+[e2] n = 1000, load factor 0.9, sequential keys (900 items), ns per operation   (buckets 1 x 1189 slots, fp 30 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          8.1    170.2    158.6    286.7     91.0
+indexed[btree-packed7]                125.4     64.3     62.2     61.6    213.4
+indexed[std-btree] (thesis-like)       94.3     59.3     64.7     62.9    186.2
+indexed[std-hash]                      73.8     26.7     26.7     26.3     63.9
+k-tries[btree-packed7]                225.4    168.1     66.8     66.4    342.8
+std HashMap (SipHash)                  13.3     10.7     10.1     10.3     11.4
+std HashMap (Fx hasher)                 6.2      4.6      2.4      1.9      5.3
+
+[e2] n = 1000, load factor 0.9, random keys (900 items), ns per operation   (buckets 1 x 1189 slots, fp 30 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.2    155.4    155.4    284.2    131.4
+indexed[btree-packed7]                142.2     65.9     63.2     63.8    236.8
+indexed[std-btree] (thesis-like)       97.9     56.6     62.2     59.4    181.9
+indexed[std-hash]                      73.4     25.9     26.9     26.3     64.3
+k-tries[btree-packed7]                314.6    223.6     82.2     81.3    388.7
+std HashMap (SipHash)                  13.3     10.7     10.1     10.3     11.1
+std HashMap (Fx hasher)                 6.7      4.6      2.6      2.8      6.1
+
+[e2] n = 10000, load factor 0.5, sequential keys (5000 items), ns per operation   (buckets 4 x 2700 slots, fp 34 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.2    209.9    211.0    388.8    165.0
+indexed[btree-packed7]                155.4     83.2     79.9     82.5    255.6
+indexed[std-btree] (thesis-like)       98.8     63.0     68.8     65.9    193.2
+indexed[std-hash]                      64.2     27.5     28.5     27.1     69.2
+k-tries[btree-packed7]                238.4    204.7     84.7     83.5    348.2
+std HashMap (SipHash)                  13.4     11.4     11.1      9.9     11.2
+std HashMap (Fx hasher)                 7.4      4.9      2.8      2.4      5.5
+
+[e2] n = 10000, load factor 0.5, random keys (5000 items), ns per operation   (buckets 4 x 2700 slots, fp 34 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.2    213.3    210.4    392.6    151.4
+indexed[btree-packed7]                146.9     82.9     78.0     77.4    245.4
+indexed[std-btree] (thesis-like)       99.8     62.8     68.6     66.3    195.3
+indexed[std-hash]                      68.5     27.9     29.7     27.3     71.5
+k-tries[btree-packed7]                293.6    197.8     86.1     82.7    356.0
+std HashMap (SipHash)                  13.8     11.4     11.1     10.1     11.5
+std HashMap (Fx hasher)                 7.2      4.9      2.8      2.3      5.4
+
+[e2] n = 10000, load factor 0.9, sequential keys (9000 items), ns per operation   (buckets 4 x 2700 slots, fp 34 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.6    356.8    356.2    788.6    190.9
+indexed[btree-packed7]                162.2     87.7     85.4     81.3    301.0
+indexed[std-btree] (thesis-like)      104.6     69.8     75.6     72.2    215.0
+indexed[std-hash]                      88.6     30.9     32.4     26.7     72.7
+k-tries[btree-packed7]                253.0    203.7     88.7     85.4    387.0
+std HashMap (SipHash)                  13.8     11.5     11.1     10.5     12.4
+std HashMap (Fx hasher)                 7.9      4.9      2.8      2.2      5.4
+
+[e2] n = 10000, load factor 0.9, random keys (9000 items), ns per operation   (buckets 4 x 2700 slots, fp 34 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.5    356.5    370.2    772.5    195.3
+indexed[btree-packed7]                155.0     86.4     86.8    101.0    270.6
+indexed[std-btree] (thesis-like)      104.9     70.8     76.3     72.8    213.5
+indexed[std-hash]                      67.4     30.6     32.2     26.8     72.7
+k-tries[btree-packed7]                277.3    210.6     88.9     91.6    387.7
+std HashMap (SipHash)                  13.9     11.5     11.2     10.6     12.7
+std HashMap (Fx hasher)                 7.1      5.9      3.1      3.0      7.0
+
+[e2] n = 100000, load factor 0.5, sequential keys (50000 items), ns per operation   (buckets 21 x 5135 slots, fp 37 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.6    406.5    450.1    825.0    223.6
+indexed[btree-packed7]                260.1    155.0    133.7    122.8    403.9
+indexed[std-btree] (thesis-like)      165.4     97.0    131.4     92.6    288.4
+indexed[std-hash]                      90.5     56.1     59.5     27.8    130.8
+k-tries[btree-packed7]                327.6    318.0    151.0    130.4    502.7
+std HashMap (SipHash)                  24.4     17.5     16.7     11.4     18.4
+std HashMap (Fx hasher)                18.2      8.7      5.0      2.4      8.5
+
+[e2] n = 100000, load factor 0.5, random keys (50000 items), ns per operation   (buckets 21 x 5135 slots, fp 37 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          8.1    440.0    511.7    855.5    231.9
+indexed[btree-packed7]                211.4    145.3    139.7    106.2    376.8
+indexed[std-btree] (thesis-like)      143.5     88.2     95.3    112.7    288.4
+indexed[std-hash]                      87.8     71.0     56.6     29.5    112.9
+k-tries[btree-packed7]                352.0    298.2    155.1    130.6    543.8
+std HashMap (SipHash)                  24.0     17.5     16.7     11.4     15.9
+std HashMap (Fx hasher)                17.6      8.6      4.8      2.9      7.9
+
+[e2] n = 100000, load factor 0.9, sequential keys (90000 items), ns per operation   (buckets 21 x 5135 slots, fp 37 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.6    781.5    805.4     1546    412.0
+indexed[btree-packed7]                251.0    157.7    178.9    159.8    469.6
+indexed[std-btree] (thesis-like)      149.1    139.3    158.4    121.5    347.9
+indexed[std-hash]                      81.1     73.7     92.5     35.9    179.0
+k-tries[btree-packed7]                345.3    339.2    156.6    154.2    608.0
+std HashMap (SipHash)                  21.1     17.6     16.9     13.1     29.5
+std HashMap (Fx hasher)                15.1      8.7      4.9      2.3      7.9
+
+[e2] n = 100000, load factor 0.9, random keys (90000 items), ns per operation   (buckets 21 x 5135 slots, fp 37 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                          7.6    787.9    814.2     1505    405.4
+indexed[btree-packed7]                237.3    179.1    151.2    129.9    492.0
+indexed[std-btree] (thesis-like)      154.1    154.7    141.8    119.8    355.1
+indexed[std-hash]                     106.9    134.4    146.4     44.5    224.8
+k-tries[btree-packed7]                380.3    345.4    155.3    165.5    659.4
+std HashMap (SipHash)                  21.2     17.8     17.0     13.1     21.4
+std HashMap (Fx hasher)                15.0      8.8      5.2      4.4     11.2
+
+[e2] n = 1000000, load factor 0.5, sequential keys (500000 items), ns per operation   (buckets 126 x 8713 slots, fp 39 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                         12.2    841.5    903.8     1633    454.8
+indexed[btree-packed7]                585.7    834.5    684.1    416.3     1304
+indexed[std-btree] (thesis-like)      492.7    669.0    566.1    587.5     1353
+indexed[std-hash]                     262.8    532.9    529.9    113.2    852.2
+k-tries[btree-packed7]                 1135     1384    972.1    694.3     2676
+std HashMap (SipHash)                 158.4    262.9    216.3     74.4    248.9
+std HashMap (Fx hasher)               185.0    190.2    115.7     29.4    187.6
+
+[e2] n = 1000000, load factor 0.5, random keys (500000 items), ns per operation   (buckets 126 x 8713 slots, fp 39 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                         19.1     1828     1890     3793    986.4
+indexed[btree-packed7]                791.2    912.2     1006    751.0     2167
+indexed[std-btree] (thesis-like)      604.1    700.4    750.8    592.5     1573
+indexed[std-hash]                     353.7    554.7    563.9    132.7     1116
+k-tries[btree-packed7]                 1150     1438    963.1    768.2     2506
+std HashMap (SipHash)                 202.6    241.8    216.0     79.1    250.6
+std HashMap (Fx hasher)               166.1    258.9     85.8     25.4    169.2
+
+[e2] n = 1000000, load factor 0.9, sequential keys (900000 items), ns per operation   (buckets 126 x 8713 slots, fp 39 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                         16.7     3704     3969     8527     1815
+indexed[btree-packed7]                 1039     1231     1122    875.4     2417
+indexed[std-btree] (thesis-like)      909.6     1045    952.4    858.0     2074
+indexed[std-hash]                     317.1    573.7    621.6    178.6     1032
+k-tries[btree-packed7]                 1273     1778     1360    951.3     3040
+std HashMap (SipHash)                 135.5    211.5    208.8     71.7    212.0
+std HashMap (Fx hasher)               120.5    211.8     94.8      5.7    146.7
+
+[e2] n = 1000000, load factor 0.9, random keys (900000 items), ns per operation   (buckets 126 x 8713 slots, fp 39 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                         12.0     3451     3500     7329     1694
+indexed[btree-packed7]                 1054     1358     1200    947.1     2107
+indexed[std-btree] (thesis-like)      770.8    815.8    829.4    707.1     1664
+indexed[std-hash]                     285.2    638.8    634.6    181.8     1021
+k-tries[btree-packed7]                 1405     1728     1111    934.9     3011
+std HashMap (SipHash)                 152.2    260.2    248.5     74.8    236.7
+std HashMap (Fx hasher)               146.7    190.3     77.9     44.0    150.1
+
+[e2] n = 10000000, load factor 0.5, sequential keys (5000000 items), ns per operation   (buckets 795 x 13656 slots, fp 41 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                      (skipped: O(bucket) scans at this size take minutes)
+indexed[btree-packed7]                 1564     1591     1563     1503     3151
+indexed[std-btree] (thesis-like)       1115     1125     1145     1104     2382
+indexed[std-hash]                     477.8    698.8    721.7    230.9     1276
+k-tries[btree-packed7]                 1577     1894     1337     1219     3245
+std HashMap (SipHash)                 293.6    350.0    264.5    113.1    365.6
+std HashMap (Fx hasher)               295.7    363.3     91.2     34.0    388.1
+
+[e2] n = 10000000, load factor 0.5, random keys (5000000 items), ns per operation   (buckets 795 x 13656 slots, fp 41 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                      (skipped: O(bucket) scans at this size take minutes)
+indexed[btree-packed7]                 1241     1315     1291     1180     2638
+indexed[std-btree] (thesis-like)       1080     1083     1117     1067     2356
+indexed[std-hash]                     483.2    706.6    733.4    222.1     1375
+k-tries[btree-packed7]                 1646     1935     1300     1207     3360
+std HashMap (SipHash)                 287.8    344.7    265.4    115.9    356.4
+std HashMap (Fx hasher)               293.1    377.0     92.6     42.5    408.2
+
+[e2] n = 10000000, load factor 0.9, sequential keys (9000000 items), ns per operation   (buckets 795 x 13656 slots, fp 41 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                      (skipped: O(bucket) scans at this size take minutes)
+indexed[btree-packed7]                 1543     1518     1486     1408     3098
+indexed[std-btree] (thesis-like)       1308     1407     1428     1384     2792
+indexed[std-hash]                     570.6    742.9    794.5    250.1     1434
+k-tries[btree-packed7]                 1770     2067     1487     1407     3700
+std HashMap (SipHash)                 271.3    348.2    262.4    119.3    346.1
+std HashMap (Fx hasher)               286.6    363.8     87.3     33.7    381.2
+
+[e2] n = 10000000, load factor 0.9, random keys (9000000 items), ns per operation   (buckets 795 x 13656 slots, fp 41 bits)
+implementation                       insert    upsert   get-hit  get-miss    remove
+slow-partition                      (skipped: O(bucket) scans at this size take minutes)
+indexed[btree-packed7]                 1402     1445     1471     1320     3001
+indexed[std-btree] (thesis-like)       1269     1364     1374     1282     2748
+indexed[std-hash]                     511.9    735.9    781.1    244.5     1409
+k-tries[btree-packed7]                 1841     2100     1472     1328     3684
+std HashMap (SipHash)                 278.9    348.4    260.0    123.3    350.2
+std HashMap (Fx hasher)               266.3    363.4     90.0     47.3    383.5
+
+[e3] n = 1000000, 900000 random keys; each operation timed individually (timer overhead ~125 ns is included in every figure)
+
+  configuration: paper-geometry
+  implementation                op            p50      p90      p99    p99.9    p99.99        max   >100us rebuilds
+  indexed[btree-packed7]        insert        500     1200     4800    19400    808000   15756000      197        0
+  indexed[btree-packed7]        delete       1200     2800    10200    41300   1626000    9134600      548        0
+  k-tries[btree-packed7]        insert        600     1900     8100    27100   1100200   15615100      273        0
+  k-tries[btree-packed7]        delete       1400     3600    17400    77700   1749600    8823600      781        0
+  std HashMap (Fx hasher)       insert        100      400     1600     6100     40200    2919300       52        0
+  std HashMap (Fx hasher)       delete        200      600     1800     7400    224700   12942800      124        0
+
+  configuration: 14-bit-fingerprints
+  implementation                op            p50      p90      p99    p99.9    p99.99        max   >100us rebuilds
+  indexed[btree-packed7]        insert        600     2000     8800  3846800  23579400   64653500     2950     2931
+  indexed[btree-packed7]        delete       1200     2900    10800    55900   1854700   12928900      671     2931
+  k-tries[btree-packed7]        insert        800     2800    14300  3870400  23950500   63458400     2982     2870
+  k-tries[btree-packed7]        delete       1400     3500    16000    49600   1689900   14688800      592     2870
+  std HashMap (Fx hasher)       insert        100      400     1600     5500     68700    4932300       72        0
+  std HashMap (Fx hasher)       delete        200      600     1800     7100    115500    4945400       96        0
+
+[e4] bits per stored key, table filled to capacity (w = 32 bits per key)
+implementation                             n  slots/key  counter   mapper   buffer    overheadlog2 log2 n
+slow-partition                          1000      38.05     0.01     0.00     0.00        6.06       3.32
+indexed[btree-packed7]                  1000      38.05     0.01    45.22     0.00       51.28       3.32
+indexed[sorted-vec]                     1000      38.05     0.01    41.00     0.00       47.06       3.32
+k-tries[btree-packed7]                  1000      38.05     0.01    45.12   312.34      363.51       3.32
+slow-partition                         10000      34.56     0.00     0.00     0.00        2.56       3.73
+indexed[btree-packed7]                 10000      34.56     0.00    50.30     0.00       52.86       3.73
+indexed[sorted-vec]                    10000      34.56     0.00    46.00     0.00       48.56       3.73
+k-tries[btree-packed7]                 10000      34.56     0.00    50.25    51.00      103.81       3.73
+slow-partition                        100000      34.51     0.00     0.00     0.00        2.51       4.05
+indexed[btree-packed7]                100000      34.51     0.00    54.33     0.00       56.84       4.05
+indexed[sorted-vec]                   100000      34.51     0.00    50.00     0.00       52.51       4.05
+k-tries[btree-packed7]                100000      34.51     0.00    54.33     9.05       65.89       4.05
+slow-partition                       1000000      35.13     0.00     0.00     0.00        3.13       4.32
+indexed[btree-packed7]               1000000      35.13     0.00    57.33     0.00       60.46       4.32
+indexed[sorted-vec]                  1000000      35.13     0.00    53.00     0.00       56.13       4.32
+k-tries[btree-packed7]               1000000      35.13     0.00    57.33     1.59       62.05       4.32
+slow-partition                      10000000      34.74     0.00     0.00     0.00        2.74       4.54
+indexed[btree-packed7]              10000000      34.74     0.00    59.33     0.00       62.07       4.54
+indexed[sorted-vec]                 10000000      34.74     0.00    55.00     0.00       57.74       4.54
+k-tries[btree-packed7]              10000000      34.74     0.00    59.33     0.28       62.36       4.54
+
+[e5] tabulated node, 4-bit fingerprints, 2-bit positions, 3 entries per node
+  states: 37825   table entries: 1597599   build time: 227.1 ms
+  mapper workload (25% insert, 25% remove, 50% get on a 16-fingerprint universe), ns per operation:
+    btree-tabulated-4x2 (every node op is a table read)        120.5
+    btree-packed7                                               64.5
+    sorted-vec                                                  33.2
+    std-btree                                                   50.2
+    std-hash                                                    38.1
+
+total time: 3598.7 s

@@ -1,0 +1,101 @@
+experiment,impl,n,mean_bucket_load,bucket_cap,keys,phase,ns_per_op_median,ns_per_op_min,ns_per_op_max,reps
+e1,slow-partition,262144,32,73,random,insert_new,20.499,14.519,27.059,5
+e1,slow-partition,262144,32,73,random,get_hit,88.979,74.150,119.794,5
+e1,slow-partition,262144,32,73,random,get_miss,75.233,66.468,97.190,5
+e1,slow-partition,262144,32,73,random,remove,62.503,56.650,88.057,5
+e1,indexed[btree-packed7],262144,32,73,random,insert_new,297.636,287.231,326.820,5
+e1,indexed[btree-packed7],262144,32,73,random,get_hit,271.518,243.129,281.728,5
+e1,indexed[btree-packed7],262144,32,73,random,get_miss,211.230,194.715,252.109,5
+e1,indexed[btree-packed7],262144,32,73,random,remove,518.415,479.748,595.584,5
+e1,indexed[std-btree] (thesis-like),262144,32,73,random,insert_new,273.613,262.874,286.562,5
+e1,indexed[std-btree] (thesis-like),262144,32,73,random,get_hit,272.435,262.242,276.237,5
+e1,indexed[std-btree] (thesis-like),262144,32,73,random,get_miss,238.166,226.505,240.693,5
+e1,indexed[std-btree] (thesis-like),262144,32,73,random,remove,416.131,401.223,498.153,5
+e1,indexed[std-hash],262144,32,73,random,insert_new,270.806,248.064,338.659,5
+e1,indexed[std-hash],262144,32,73,random,get_hit,291.132,254.538,308.110,5
+e1,indexed[std-hash],262144,32,73,random,get_miss,82.422,63.043,105.171,5
+e1,indexed[std-hash],262144,32,73,random,remove,444.253,413.723,509.174,5
+e1,std HashMap (Fx hasher),262144,32,73,random,insert_new,22.221,19.476,30.804,5
+e1,std HashMap (Fx hasher),262144,32,73,random,get_hit,13.048,11.081,17.167,5
+e1,std HashMap (Fx hasher),262144,32,73,random,get_miss,5.085,4.806,10.738,5
+e1,std HashMap (Fx hasher),262144,32,73,random,remove,22.684,18.349,38.243,5
+e1,slow-partition,262144,128,203,random,insert_new,13.795,12.151,24.305,5
+e1,slow-partition,262144,128,203,random,get_hit,98.588,71.173,186.627,5
+e1,slow-partition,262144,128,203,random,get_miss,96.798,93.627,127.733,5
+e1,slow-partition,262144,128,203,random,remove,69.099,53.888,77.760,5
+e1,indexed[btree-packed7],262144,128,203,random,insert_new,292.329,239.502,389.428,5
+e1,indexed[btree-packed7],262144,128,203,random,get_hit,264.130,260.963,283.791,5
+e1,indexed[btree-packed7],262144,128,203,random,get_miss,186.708,185.579,232.444,5
+e1,indexed[btree-packed7],262144,128,203,random,remove,531.940,517.801,665.978,5
+e1,indexed[std-btree] (thesis-like),262144,128,203,random,insert_new,232.497,196.925,258.919,5
+e1,indexed[std-btree] (thesis-like),262144,128,203,random,get_hit,273.130,264.515,292.606,5
+e1,indexed[std-btree] (thesis-like),262144,128,203,random,get_miss,223.282,200.074,227.608,5
+e1,indexed[std-btree] (thesis-like),262144,128,203,random,remove,483.852,438.585,510.913,5
+e1,indexed[std-hash],262144,128,203,random,insert_new,191.797,183.652,214.150,5
+e1,indexed[std-hash],262144,128,203,random,get_hit,255.604,240.236,257.796,5
+e1,indexed[std-hash],262144,128,203,random,get_miss,54.598,50.901,74.785,5
+e1,indexed[std-hash],262144,128,203,random,remove,374.707,360.213,453.063,5
+e1,std HashMap (Fx hasher),262144,128,203,random,insert_new,30.180,21.947,35.606,5
+e1,std HashMap (Fx hasher),262144,128,203,random,get_hit,13.630,12.349,15.611,5
+e1,std HashMap (Fx hasher),262144,128,203,random,get_miss,5.154,5.094,12.840,5
+e1,std HashMap (Fx hasher),262144,128,203,random,remove,20.355,18.365,27.304,5
+e1,slow-partition,262144,512,655,random,insert_new,9.569,9.384,26.108,5
+e1,slow-partition,262144,512,655,random,get_hit,178.353,162.880,192.700,5
+e1,slow-partition,262144,512,655,random,get_miss,259.323,236.306,291.636,5
+e1,slow-partition,262144,512,655,random,remove,97.406,94.918,99.314,5
+e1,indexed[btree-packed7],262144,512,655,random,insert_new,303.897,272.939,364.579,5
+e1,indexed[btree-packed7],262144,512,655,random,get_hit,327.034,284.237,339.884,5
+e1,indexed[btree-packed7],262144,512,655,random,get_miss,243.060,205.183,260.384,5
+e1,indexed[btree-packed7],262144,512,655,random,remove,694.072,660.504,821.618,5
+e1,indexed[std-btree] (thesis-like),262144,512,655,random,insert_new,237.291,206.816,286.333,5
+e1,indexed[std-btree] (thesis-like),262144,512,655,random,get_hit,246.508,222.467,265.246,5
+e1,indexed[std-btree] (thesis-like),262144,512,655,random,get_miss,194.695,177.134,211.816,5
+e1,indexed[std-btree] (thesis-like),262144,512,655,random,remove,498.069,465.128,576.716,5
+e1,indexed[std-hash],262144,512,655,random,insert_new,159.987,134.461,173.917,5
+e1,indexed[std-hash],262144,512,655,random,get_hit,232.905,204.906,254.720,5
+e1,indexed[std-hash],262144,512,655,random,get_miss,42.787,41.374,62.670,5
+e1,indexed[std-hash],262144,512,655,random,remove,384.518,372.643,414.088,5
+e1,std HashMap (Fx hasher),262144,512,655,random,insert_new,19.503,18.666,35.262,5
+e1,std HashMap (Fx hasher),262144,512,655,random,get_hit,15.951,12.320,22.703,5
+e1,std HashMap (Fx hasher),262144,512,655,random,get_miss,7.737,4.905,10.466,5
+e1,std HashMap (Fx hasher),262144,512,655,random,remove,28.946,19.210,37.089,5
+e1,slow-partition,262144,2048,2327,random,insert_new,9.936,8.795,23.125,5
+e1,slow-partition,262144,2048,2327,random,get_hit,482.393,457.073,520.481,5
+e1,slow-partition,262144,2048,2327,random,get_miss,832.145,765.170,954.808,5
+e1,slow-partition,262144,2048,2327,random,remove,230.136,220.788,311.904,5
+e1,indexed[btree-packed7],262144,2048,2327,random,insert_new,316.780,310.477,325.755,5
+e1,indexed[btree-packed7],262144,2048,2327,random,get_hit,341.407,325.846,350.685,5
+e1,indexed[btree-packed7],262144,2048,2327,random,get_miss,265.355,229.139,288.245,5
+e1,indexed[btree-packed7],262144,2048,2327,random,remove,750.952,691.778,796.178,5
+e1,indexed[std-btree] (thesis-like),262144,2048,2327,random,insert_new,236.736,220.599,254.663,5
+e1,indexed[std-btree] (thesis-like),262144,2048,2327,random,get_hit,276.153,236.641,297.612,5
+e1,indexed[std-btree] (thesis-like),262144,2048,2327,random,get_miss,215.980,208.252,230.845,5
+e1,indexed[std-btree] (thesis-like),262144,2048,2327,random,remove,563.494,526.931,600.971,5
+e1,indexed[std-hash],262144,2048,2327,random,insert_new,132.243,119.689,137.472,5
+e1,indexed[std-hash],262144,2048,2327,random,get_hit,226.045,211.374,274.856,5
+e1,indexed[std-hash],262144,2048,2327,random,get_miss,44.793,42.054,49.337,5
+e1,indexed[std-hash],262144,2048,2327,random,remove,379.603,343.543,387.895,5
+e1,std HashMap (Fx hasher),262144,2048,2327,random,insert_new,27.474,21.849,36.919,5
+e1,std HashMap (Fx hasher),262144,2048,2327,random,get_hit,18.548,12.216,26.120,5
+e1,std HashMap (Fx hasher),262144,2048,2327,random,get_miss,5.250,4.990,5.730,5
+e1,std HashMap (Fx hasher),262144,2048,2327,random,remove,22.893,17.604,36.831,5
+e1,slow-partition,262144,8192,8743,random,insert_new,11.677,10.107,21.714,5
+e1,slow-partition,262144,8192,8743,random,get_hit,1785.739,1652.848,1819.410,5
+e1,slow-partition,262144,8192,8743,random,get_miss,3323.820,3215.295,3812.026,5
+e1,slow-partition,262144,8192,8743,random,remove,813.998,771.542,826.004,5
+e1,indexed[btree-packed7],262144,8192,8743,random,insert_new,372.771,354.546,527.097,5
+e1,indexed[btree-packed7],262144,8192,8743,random,get_hit,400.787,357.824,544.400,5
+e1,indexed[btree-packed7],262144,8192,8743,random,get_miss,284.700,257.779,485.769,5
+e1,indexed[btree-packed7],262144,8192,8743,random,remove,831.574,786.230,955.753,5
+e1,indexed[std-btree] (thesis-like),262144,8192,8743,random,insert_new,229.672,217.923,252.417,5
+e1,indexed[std-btree] (thesis-like),262144,8192,8743,random,get_hit,280.065,270.094,286.486,5
+e1,indexed[std-btree] (thesis-like),262144,8192,8743,random,get_miss,226.886,187.121,302.551,5
+e1,indexed[std-btree] (thesis-like),262144,8192,8743,random,remove,574.768,545.418,662.500,5
+e1,indexed[std-hash],262144,8192,8743,random,insert_new,126.885,115.536,137.043,5
+e1,indexed[std-hash],262144,8192,8743,random,get_hit,210.858,199.080,221.760,5
+e1,indexed[std-hash],262144,8192,8743,random,get_miss,49.442,36.634,52.368,5
+e1,indexed[std-hash],262144,8192,8743,random,remove,337.748,318.418,352.846,5
+e1,std HashMap (Fx hasher),262144,8192,8743,random,insert_new,20.669,17.956,30.072,5
+e1,std HashMap (Fx hasher),262144,8192,8743,random,get_hit,19.450,12.305,122.614,5
+e1,std HashMap (Fx hasher),262144,8192,8743,random,get_miss,5.095,5.017,5.931,5
+e1,std HashMap (Fx hasher),262144,8192,8743,random,remove,23.522,18.415,36.473,5

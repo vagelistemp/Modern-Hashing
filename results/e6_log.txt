@@ -1,0 +1,37 @@
+[e6a] key-slot memory per stored key, capacity n = 1000000: fixed buckets vs slab buckets
+implementation               fill  key-slot bits/key  mapper bits/key   insert ns    get ns
+indexed (fixed buckets)       0.1             351.31            57.31       425.3     423.5
+indexed (slab buckets)        0.1              35.83            57.31       778.3     618.1
+indexed (fixed buckets)       0.3             117.10            57.34       746.2     721.0
+indexed (slab buckets)        0.3              33.66            57.34       724.2     853.3
+indexed (fixed buckets)       0.5              70.26            57.33       847.0     871.6
+indexed (slab buckets)        0.5              33.05            57.33       845.7     934.5
+indexed (fixed buckets)       0.7              50.19            57.33       939.5    1026.5
+indexed (slab buckets)        0.7              33.11            57.33       875.9    1042.1
+indexed (fixed buckets)       0.9              39.03            57.33       652.0     671.0
+indexed (slab buckets)        0.9              32.85            57.33       744.7     710.4
+
+[e6b] a Resizable table growing to 1000000 keys and shrinking back (a checkpoint every 100000 operations)
+phase          ops      keys  capacity  resizing    bits/key  window p99 ns  window max ns  resizes
+grow        100000    100000    256000      true        88.6           4700        4201500        8
+grow        200000    200000    512000      true        90.1           4900        3053500        9
+grow        300000    300000    512000     false        89.4           6600        2416300        9
+grow        400000    400000   1024000      true        90.5           4200        2291400       10
+grow        500000    500000   1024000     false        90.3          12100        4338200       10
+grow        600000    600000   1024000     false        90.7           5200        5526600       10
+grow        700000    700000   1024000     false        90.4           3500        1997600       10
+grow        800000    800000   2048000      true        91.2          12700        4164200       11
+grow        900000    900000   2048000      true        92.1          30300        4374300       11
+grow       1000000   1000000   2048000     false        91.7          20100        3224700       11
+shrink      100000    900000   2048000     false        93.2           7400        2303700       11
+shrink      200000    800000   2048000     false        93.7           9700        2614800       11
+shrink      300000    700000   2048000     false        94.4           7000        2397300       11
+shrink      400000    600000   2048000     false        95.0           6300        3014300       11
+shrink      500000    500000   1024000      true        95.9           7600        3623300       12
+shrink      600000    400000   1024000      true        95.2          21700        3563400       12
+shrink      700000    300000   1024000     false        93.6           6100        3219300       12
+shrink      800000    200000    512000      true        93.9          12400        2879600       13
+shrink      900000    100000    256000      true        93.9           7800        2545800       14
+shrink     1000000         0      1000     false      2560.0           7700        3684800       22
+
+total time: 235.1 s

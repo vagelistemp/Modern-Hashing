@@ -1,0 +1,8 @@
+experiment,mapper,universe,ns_per_op
+e5,btree-tabulated-4x2 (every node op is a table read),16,120.505
+e5,btree-packed7,16,64.486
+e5,sorted-vec,16,33.163
+e5,std-btree,16,50.246
+e5,std-hash,16,38.136
+e5-tables,states,37825,227.0506
+e5-tables,entries,1597599,227.0506

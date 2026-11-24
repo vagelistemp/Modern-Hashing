@@ -1,0 +1,13 @@
+experiment,config,impl,operation,p50_ns,p90_ns,p99_ns,p999_ns,p9999_ns,max_ns,ops_over_100us,global_rebuilds,bucket_rebuilds,fp_widenings,timer_overhead_ns
+e3,paper-geometry,indexed[btree-packed7],insert,500,1200,4800,19400,808000,15756000,197,0,0,0,124.9
+e3,paper-geometry,indexed[btree-packed7],delete,1200,2800,10200,41300,1626000,9134600,548,0,0,0,124.9
+e3,paper-geometry,k-tries[btree-packed7],insert,600,1900,8100,27100,1100200,15615100,273,0,0,0,124.9
+e3,paper-geometry,k-tries[btree-packed7],delete,1400,3600,17400,77700,1749600,8823600,781,0,0,0,124.9
+e3,paper-geometry,std HashMap (Fx hasher),insert,100,400,1600,6100,40200,2919300,52,0,0,0,124.9
+e3,paper-geometry,std HashMap (Fx hasher),delete,200,600,1800,7400,224700,12942800,124,0,0,0,124.9
+e3,14-bit-fingerprints,indexed[btree-packed7],insert,600,2000,8800,3846800,23579400,64653500,2950,0,2931,1104,124.9
+e3,14-bit-fingerprints,indexed[btree-packed7],delete,1200,2900,10800,55900,1854700,12928900,671,0,2931,1104,124.9
+e3,14-bit-fingerprints,k-tries[btree-packed7],insert,800,2800,14300,3870400,23950500,63458400,2982,0,2870,1131,124.9
+e3,14-bit-fingerprints,k-tries[btree-packed7],delete,1400,3500,16000,49600,1689900,14688800,592,0,2870,1131,124.9
+e3,14-bit-fingerprints,std HashMap (Fx hasher),insert,100,400,1600,5500,68700,4932300,72,0,0,0,124.9
+e3,14-bit-fingerprints,std HashMap (Fx hasher),delete,200,600,1800,7100,115500,4945400,96,0,0,0,124.9
